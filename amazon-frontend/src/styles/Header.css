@@ -1,211 +1,213 @@
-#header-container
-{
-
-    background-color: #141921;
-    display: flex;
-
+#header-container {
+  background-color: #141921;
+  display: flex;
 }
 
-
-#header-container   *
-{
-
-
+#header-container * {
 }
-
 
 .shiping-address-container *,
-.search-category-selector .label
-{
-    color: white
+.search-category-selector .label {
+  color: white;
 }
 
-#header-left
-{
-
-    flex: 1
-
+#header-left {
 }
 
-
-#header-left img
-{
-
-    width: 7em;
-
+#header-left img {
+  width: 7em;
 }
 
-#header-center
-{
-
-    flex: 2;
-    display: flex;
-
+#header-center {
+  flex: 1;
+  display: flex;
 }
 
-
-
-#header-right
-{
-
-    flex: 1;
-    display: flex;
-    justify-content: flex-end;
-
+#header-right {
+  display: flex;
+  justify-content: flex-end;
 }
 
-
-#header-container .header-column
-{
-padding: 0.4em;
-display: flex;
-align-items: center;
-
+#header-container .header-column {
+  padding: 0.4em;
+  display: flex;
+  align-items: center;
 }
 
-
-#header-container .header-column  > a
-{
-    border:1px solid rgba(255, 255, 255, 0);
-    padding: 10px;
-    height: 100%;
-    flex-direction: column;
-    display: flex;
-    justify-content: center;
-    margin: 0 0.4em;
-    text-decoration: none;
+#header-container .header-column > a {
+  border: 1px solid rgba(255, 255, 255, 0);
+  padding: 10px;
+  height: 100%;
+  flex-direction: column;
+  display: inline-flex;
+  justify-content: center;
+  margin: 0 0.4em;
+  text-decoration: none;
 }
 
-
-#header-container .header-column  > a:hover
-{
-
-    border:1px solid white;
-
+#header-container .header-column > a:hover {
+  border: 1px solid white;
 }
 
-#header-container .header-column  .shiping-address-container p
-{
-
-padding: 0;
-margin: 0;
-
-
+#header-container .header-column .shiping-address-container p {
+  padding: 0;
+  margin: 0;
 }
 
-
-#header-container .header-column  .shiping-address-container p.shipping-address
-{
-
-font-weight: bold;
-
+#header-container .header-column .shiping-address-container p.shipping-address {
+  font-weight: bold;
 }
 
-#header-container .header-column  .shiping-address-container p.shipping-address-send-to
-{
-    font-size: 0.7em;
-    text-align: center;
+#header-container
+  .header-column
+  .shiping-address-container
+  p.shipping-address-send-to {
+  font-size: 0.8em;
+  text-align: center;
+  color: white;
+  font-weight: 600;
 }
 
-
-#header-searchbar
-{
-    flex: 1 1;
-    height: 80%;
-    display: flex;
-    align-items: center;
-    border-radius: 4px;
-    overflow-y: hidden;
+#header-searchbar {
+  flex: 1 1;
+  height: 80%;
+  display: flex;
+  align-items: center;
+  border-radius: 4px;
+  overflow-y: hidden;
 }
 
-
-#header-searchbar .search-button
-{
-
-    background-color: #febd69;
-    height: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 0 0.7em;
-
+#header-searchbar .search-button {
+  background-color: #febd69;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 0.7em;
 }
 
-
-
-
-
-#header-searchbar .search-button .iconsearch
-{
-
-
-
-
+#header-searchbar .search-button .iconsearch {
 }
 
-
-#header-searchbar .search-category-selector
-{
-
-
-    background-color: #f3f3f3;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    display: inline-flex;
-    height: 100%;
-    padding: 8px;
-    border-right: 1px solid #cdcdcd;
-  
+#header-searchbar .search-category-selector {
+  background-color: #f3f3f3;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  display: inline-flex;
+  height: 100%;
+  padding: 8px;
+  border-right: 1px solid #cdcdcd;
 }
 
-
-#header-searchbar  input
-{
-height: 100%;
-border: none;
-outline: none;
-padding-left: 10px;
-font-size: 15px;
-background: white;
-color: #111;
-flex: 1;
+#header-searchbar input {
+  height: 100%;
+  border: none;
+  outline: none;
+  padding-left: 10px;
+  font-size: 15px;
+  background: white;
+  color: #111;
+  flex: 1;
 }
 
-
-#header-searchbar .search-category-selector .label
-{
-    color: #333333;
-    font-size: 0.75em;
+#header-searchbar .search-category-selector .label {
+  color: #333333;
+  font-size: 0.75em;
 }
 
-#header-searchbar .search-category-selector span
-{
+#header-searchbar .search-category-selector span {
+}
 
+#header-searchbar .search-category-selector .icondown {
+  font-size: 0.8em;
+  color: #666666;
+  margin-left: 5px;
+}
 
+#header-searchbar .iconsearch {
+  font-size: 1.5em;
+  color: #333333;
+}
 
-    
-} 
+#header-container .header-column > a.language-selector {
+  display: inline-flex;
+  flex-direction: row;
+  align-items: flex-end;
+}
 
+#header-container .header-column > a.language-selector .icondown {
+  margin-left: 5px;
+  color: #a7acb2;
+  font-size: 0.8em;
+}
 
+#header-container .header-column > a.myaccount-hello-message {
+}
 
-#header-searchbar .search-category-selector .icondown
-{
+#header-container .header-column > a.myaccount-hello-message .hellomessage {
+  color: white;
+  font-size: 0.8em;
+  font-weight: 600;
+}
 
+#header-container .header-column > a.myaccount-hello-message .account-link {
+}
 
-font-size: 0.8em;
-color: #666666;
-margin-left: 5px;
+#header-container
+  .header-column
+  > a.myaccount-hello-message
+  .account-link
+  > span {
+}
 
-} 
+#header-container
+  .header-column
+  > a.myaccount-hello-message
+  .account-link
+  .icondown {
+  margin-left: 5px;
+  color: #a7acb2;
+  font-size: 0.8em;
+}
 
+#header-container
+  .header-column
+  > a.myaccount-hello-message
+  .account-link
+  > span {
+  color: white;
+  font-size: 1em;
+  font-weight: bold;
+}
 
+#amazoncart {
+}
 
-#header-searchbar .iconsearch
-{
+#amazoncart::after {
+}
 
-    font-size: 1.5em;
-    color: #333333;
-    
-} 
+#amazoncart .left-cart {
+  background-image: url("http://localhost:3000/assets/sprites.png");
+  background-repeat: repeat-x;
+  background-position: -10px -340px;
+  width: 40px;
+  height: 26px;
+  display: flex;
+  justify-content: center;
+}
 
+#amazoncart .left-cart .total-items {
+  color: orange;
+  margin-left: 4px;
+  transform: translateY(-8px);
+  display: block;
+  font-size: 0.9em;
+  font-weight: bold;
+}
+
+#amazoncart .center-cart {
+}
+
+#amazoncart .right-cart {
+}

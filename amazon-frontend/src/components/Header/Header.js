@@ -43,14 +43,35 @@ export default function Header() {
       </div>
 
       <div id="header-right" class="header-column">
-        <a href="" class="">
+        <a href="" className="language-selector">
           <UsaFlag width={24} />
           <FontAwesomeIcon className="icondown" icon={faCaretDown} />
         </a>
 
-        <a href=""></a>
+        <a href="" className="myaccount-hello-message">
+          <span className="hellomessage">Hello, Elizeu</span>
+          <span className="account-link">
+            <span>Account & Lists</span>
+            <FontAwesomeIcon className="icondown" icon={faCaretDown} />
+          </span>
+        </a>
 
-        <a href=""></a>
+        <a href="" className="myaccount-hello-message">
+          <span className="hellomessage">Returns</span>
+          <span className="account-link">
+            <span>& Orders</span>
+          </span>
+        </a>
+
+        <a>
+          <div id="amazoncart">
+            <div class="left-cart">
+              <span className="total-items">8</span>
+            </div>
+
+            <div class="right-cart"></div>
+          </div>
+        </a>
 
         <a href=""></a>
       </div>
