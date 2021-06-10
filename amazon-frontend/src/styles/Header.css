@@ -98,7 +98,28 @@
   height: 100%;
   padding: 8px;
   border-right: 1px solid #cdcdcd;
+  cursor: pointer;
+  position: relative;
 }
+ 
+#header-searchbar .search-category-selector .categories_list
+{
+
+    position: absolute;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    opacity: 0;
+    cursor: pointer;
+
+}
+
+
+
+#header-searchbar .search-category-selector:hover {
+    background-color: #d6c8c8;
+  }
+  
 
 #header-searchbar input {
   height: 100%;
@@ -114,7 +135,15 @@
 #header-searchbar .search-category-selector .label {
   color: #333333;
   font-size: 0.75em;
+  font-weight: 500;
 }
+
+#header-searchbar .search-category-selector:hover .label {
+    
+    color: #272626;
+
+  }
+  
 
 #header-searchbar .search-category-selector span {
 }
@@ -125,6 +154,13 @@
   margin-left: 5px;
 }
 
+#header-searchbar .search-category-selector:hover .icondown {
+    
+    color: #383636;
+ 
+  }
+
+  
 #header-searchbar .iconsearch {
   font-size: 1.5em;
   color: #333333;

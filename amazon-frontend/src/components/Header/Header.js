@@ -10,9 +10,20 @@ import {
   faSearch,
 } from "@fortawesome/free-solid-svg-icons";
 
+
+//calbacks
+const onCategorySelector = () => {
+
+    alert(8888);
+
+}
+
+
 export default function Header() {
   return (
-    <div id="header-container">
+   <div> 
+       <div id="header-container">
+        
       <div id="header-left" class="header-column">
         <a href="">
           <img src={amazonlogo} />
@@ -29,9 +40,18 @@ export default function Header() {
 
       <div id="header-center" class="header-column">
         <div id="header-searchbar">
-          <div class="search-category-selector">
+          <div class="search-category-selector" onClick={onCategorySelector}>
             <span class="label">Tools and Home Improvement</span>
             <FontAwesomeIcon className="icondown" icon={faCaretDown} />
+
+            <select class="categories_list">
+                <option>Cars and Motors</option>
+                <option>Cars and Motors</option>
+                <option>Cars and Motors</option>
+                <option>Cars and Motors</option>
+                <option>Cars and Motors</option>
+                <option>Cars and Motors</option>
+            </select>
           </div>
 
           <input type="text" />
@@ -48,7 +68,7 @@ export default function Header() {
           <FontAwesomeIcon className="icondown" icon={faCaretDown} />
         </a>
 
-        <a href="" className="myaccount-hello-message">
+        <a href="" class="header-colum myaccount-hello-message">
           <span className="hellomessage">Hello, Elizeu</span>
           <span className="account-link">
             <span>Account & Lists</span>
@@ -56,7 +76,7 @@ export default function Header() {
           </span>
         </a>
 
-        <a href="" className="myaccount-hello-message">
+        <a href="" class="header-colum myaccount-hello-message">
           <span className="hellomessage">Returns</span>
           <span className="account-link">
             <span>& Orders</span>
@@ -64,7 +84,7 @@ export default function Header() {
         </a>
 
         <a>
-          <div id="amazoncart">
+          <div id="amazoncart" class="header-colum">
             <div class="left-cart">
               <span className="total-items">8</span>
             </div>
@@ -73,8 +93,14 @@ export default function Header() {
           </div>
         </a>
 
-        <a href=""></a>
+       
       </div>
+      </div>
+
+        <div>
+
+        </div>
+    
     </div>
   );
 }
