@@ -2,18 +2,17 @@ import React from "react";
 import "../../styles/Header.css";
 import amazonlogo from "../../assets/amazonlogo.png";
 import { ReactComponent as PortugalFlag } from "../../assets/portugalicon.svg";
+import SearchBar from "./SearchBar";
 import { ReactComponent as UsaFlag } from "../../assets/usaicon.svg";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+
 import {
   faMapMarkerAlt,
   faCaretDown,
   faSearch,
 } from "@fortawesome/free-solid-svg-icons";
 
-//calbacks
-const onCategorySelector = () => {
-  alert(8888);
-};
+
 
 export default function Header() {
   return (
@@ -34,27 +33,7 @@ export default function Header() {
         </div>
 
         <div id="header-center" class="header-column">
-          <div id="header-searchbar">
-            <div class="search-category-selector" onClick={onCategorySelector}>
-              <span class="label">Tools and Home Improvement</span>
-              <FontAwesomeIcon className="icondown" icon={faCaretDown} />
-
-              <select class="categories_list">
-                <option>Cars and Motors</option>
-                <option>Cars and Motors</option>
-                <option>Cars and Motors</option>
-                <option>Cars and Motors</option>
-                <option>Cars and Motors</option>
-                <option>Cars and Motors</option>
-              </select>
-            </div>
-
-            <input type="text" />
-
-            <a href="" class="search-button">
-              <FontAwesomeIcon className="iconsearch" icon={faSearch} />
-            </a>
-          </div>
+          <SearchBar />
         </div>
 
         <div id="header-right" class="header-column">
