@@ -22,7 +22,6 @@ export default function Header() {
               <FontAwesomeIcon icon={faMapMarkerAlt} />
               <span> 2845-093‌</span>
             </p>
-            º
           </a>
         </div>
 
