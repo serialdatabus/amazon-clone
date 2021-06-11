@@ -277,3 +277,9 @@ export const getCategories = () => [
 export const getMainCategories = () => {
   return getCategories().filter((item) => item.categorylevel === "main");
 };
+
+export const getCategoryBySlug = (slug) => {
+  const category = getCategories().filter((item) => item.slug === slug);
+
+  return category[0];
+};
