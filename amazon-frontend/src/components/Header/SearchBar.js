@@ -11,13 +11,11 @@ export default function SearchBar() {
   //calbacks
   const onChangeCategory = (e) => {
     const value = e.target.value;
-
     setcurrentcategory(getCategoryBySlug(value));
   };
 
   useEffect(() => {
     setcategorieslist(getMainCategories());
-
     return () => {};
   }, []);
 
