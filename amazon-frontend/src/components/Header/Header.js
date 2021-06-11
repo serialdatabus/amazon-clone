@@ -1,48 +1,42 @@
 import React from "react";
 import "../../styles/Header.css";
 import amazonlogo from "../../assets/amazonlogo.png";
-import { ReactComponent as PortugalFlag } from "../../assets/portugalicon.svg";
 import SearchBar from "./SearchBar";
 import { ReactComponent as UsaFlag } from "../../assets/usaicon.svg";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
-import {
-  faMapMarkerAlt,
-  faCaretDown,
-  faSearch,
-} from "@fortawesome/free-solid-svg-icons";
-
-
+import { faMapMarkerAlt, faCaretDown } from "@fortawesome/free-solid-svg-icons";
 
 export default function Header() {
   return (
     <div>
       <div id="header-container">
-        <div id="header-left" class="header-column">
-          <a href="">
-            <img src={amazonlogo} />
+        <div id="header-left" className="header-column">
+          <a href="/">
+            <img alt="" src={amazonlogo} />
           </a>
 
-          <a href="" class="shiping-address-container">
-            <p class="shipping-address-send-to">Send to Elizeu</p>
-            <p class="shipping-address">
+          <a href="/" className="shiping-address-container">
+            <p className="shipping-address-send-to">Send to Elizeu</p>
+            <p className="shipping-address">
               <FontAwesomeIcon icon={faMapMarkerAlt} />
               <span> 2845-093‌</span>
             </p>
+            º
           </a>
         </div>
 
-        <div id="header-center" class="header-column">
+        <div id="header-center" className="header-column">
           <SearchBar />
         </div>
 
-        <div id="header-right" class="header-column">
-          <a href="" className="language-selector">
+        <div id="header-right" className="header-column">
+          <a href="/" className="language-selector">
             <UsaFlag width={24} />
             <FontAwesomeIcon className="icondown" icon={faCaretDown} />
           </a>
 
-          <a href="" class="header-colum myaccount-hello-message">
+          <a href="/" className="header-colum myaccount-hello-message">
             <span className="hellomessage">Hello, Elizeu</span>
             <span className="account-link">
               <span>Account & Lists</span>
@@ -50,20 +44,20 @@ export default function Header() {
             </span>
           </a>
 
-          <a href="" class="header-colum myaccount-hello-message">
+          <a href="/" className="header-colum myaccount-hello-message">
             <span className="hellomessage">Returns</span>
             <span className="account-link">
               <span>& Orders</span>
             </span>
           </a>
 
-          <a>
-            <div id="amazoncart" class="header-colum">
-              <div class="left-cart">
+          <a href="/">
+            <div id="amazoncart" className="header-colum">
+              <div className="left-cart">
                 <span className="total-items">8</span>
               </div>
 
-              <div class="right-cart"></div>
+              <div className="right-cart"></div>
             </div>
           </a>
         </div>
