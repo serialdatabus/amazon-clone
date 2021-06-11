@@ -12,12 +12,10 @@ export default function SearchBar() {
   const onChangeCategory = (e) => {
     const value = e.target.value;
 
-    setcurrentcategory( getCategoryBySlug(value));
-    
+    setcurrentcategory(getCategoryBySlug(value));
   };
 
   useEffect(() => {
-   
     setcategorieslist(getMainCategories());
 
     return () => {};
@@ -26,14 +24,12 @@ export default function SearchBar() {
   return (
     <div id="header-searchbar">
       <div className="search-category-selector" onChange={onChangeCategory}>
-        <span className="label">
-          {currentcategory.displayname}
-        </span>
+        <span className="label">{currentcategory.displayname}</span>
         <FontAwesomeIcon className="icondown" icon={faCaretDown} />
 
         <select className="categories_list">
           {categorieslist.map((item, index) => {
-            return ( 
+            return (
               <option value={item.slug} key={item.slug}>
                 {item.displayname}
               </option>
@@ -42,7 +38,7 @@ export default function SearchBar() {
         </select>
       </div>
 
-      <input type="text"   />
+      <input type="text" />
 
       <a href="/" className="search-button">
         <FontAwesomeIcon className="iconsearch" icon={faSearch} />
