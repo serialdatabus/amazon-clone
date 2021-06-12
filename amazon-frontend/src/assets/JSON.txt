@@ -1,0 +1,1024 @@
+[
+    {
+        "id": 75,
+        "nombre": "Hortaliza",
+        "lista_especies": [
+            {
+                "id": 67,
+                "nombreVulgar": "Raiz",
+                "nombreCientifico": "Raiz cientifico",
+                "posiblesPlagas": [
+                    {
+                        "id": 54,
+                        "nombreVulgar": "Araña Roja",
+                        "nombreCientifico": "Araña roja cientifica",
+                        "url": "www.arañaroja.com",
+                        "sustanciasActivas": [
+                            {
+                                "id": 32,
+                                "nombre": "metilciclopropeno",
+                                "productosfitosanitarios": [
+                                    {
+                                        "id": 1,
+                                        "nombre": "Opponent",
+                                        "url": "www.caracteristicas.producto.1"
+                                    },
+                                    {
+                                        "id": 12,
+                                        "nombre": "Delan Pro",
+                                        "url": "www.caracteristicas.producto.12"
+                                    }
+                                ]
+                            },
+                            {
+                                "id": 42,
+                                "nombre": "Acequinocilo",
+                                "productosfitosanitarios": [
+                                    {
+                                        "id": 20,
+                                        "nombre": "Enervin SC",
+                                        "url": "www.caracteristicas.producto.20"
+                                    },
+                                    {
+                                        "id": 24,
+                                        "nombre": "Caramba EC",
+                                        "url": "www.caracteristicas.producto.24"
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "id": 55,
+                        "nombreVulgar": "Mariposa del geranio",
+                        "nombreCientifico": "Mariposa del geranio cientifica",
+                        "url": "www.mariposageranio.com",
+                        "sustanciasActivas": [
+                            {
+                                "id": 32,
+                                "nombre": "metilciclopropeno",
+                                "productosfitosanitarios": [
+                                    {
+                                        "id": 1,
+                                        "nombre": "Opponent",
+                                        "url": "www.caracteristicas.producto.1"
+                                    },
+                                    {
+                                        "id": 12,
+                                        "nombre": "Delan Pro",
+                                        "url": "www.caracteristicas.producto.12"
+                                    }
+                                ]
+                            },
+                            {
+                                "id": 43,
+                                "nombre": "Acetamiprid",
+                                "productosfitosanitarios": [
+                                    {
+                                        "id": 2,
+                                        "nombre": "Surround WP",
+                                        "url": "www.caracteristicas.producto.2"
+                                    },
+                                    {
+                                        "id": 25,
+                                        "nombre": "Vision Plus",
+                                        "url": "www.caracteristicas.producto.25"
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "id": 63,
+                        "nombreVulgar": "Carcoma",
+                        "nombreCientifico": "Carcoma cientifico",
+                        "url": "www.pulgon.com",
+                        "sustanciasActivas": [
+                            {
+                                "id": 36,
+                                "nombre": "DB",
+                                "productosfitosanitarios": [
+                                    {
+                                        "id": 10,
+                                        "nombre": "Atominal",
+                                        "url": "www.caracteristicas.producto.10"
+                                    },
+                                    {
+                                        "id": 17,
+                                        "nombre": "Sporgon",
+                                        "url": "www.caracteristicas.producto.17"
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "id": 68,
+                "nombreVulgar": "Bulbo",
+                "nombreCientifico": "Bulbo cientifico",
+                "posiblesPlagas": [
+                    {
+                        "id": 54,
+                        "nombreVulgar": "Araña Roja",
+                        "nombreCientifico": "Araña roja cientifica",
+                        "url": "www.arañaroja.com",
+                        "sustanciasActivas": [
+                            {
+                                "id": 32,
+                                "nombre": "metilciclopropeno",
+                                "productosfitosanitarios": [
+                                    {
+                                        "id": 1,
+                                        "nombre": "Opponent",
+                                        "url": "www.caracteristicas.producto.1"
+                                    },
+                                    {
+                                        "id": 12,
+                                        "nombre": "Delan Pro",
+                                        "url": "www.caracteristicas.producto.12"
+                                    }
+                                ]
+                            },
+                            {
+                                "id": 42,
+                                "nombre": "Acequinocilo",
+                                "productosfitosanitarios": [
+                                    {
+                                        "id": 20,
+                                        "nombre": "Enervin SC",
+                                        "url": "www.caracteristicas.producto.20"
+                                    },
+                                    {
+                                        "id": 24,
+                                        "nombre": "Caramba EC",
+                                        "url": "www.caracteristicas.producto.24"
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "id": 56,
+                        "nombreVulgar": "Mosquito verde",
+                        "nombreCientifico": "Mosquito verde cientifico",
+                        "url": "www.mosquitoverde.com",
+                        "sustanciasActivas": [
+                            {
+                                "id": 32,
+                                "nombre": "metilciclopropeno",
+                                "productosfitosanitarios": [
+                                    {
+                                        "id": 1,
+                                        "nombre": "Opponent",
+                                        "url": "www.caracteristicas.producto.1"
+                                    },
+                                    {
+                                        "id": 12,
+                                        "nombre": "Delan Pro",
+                                        "url": "www.caracteristicas.producto.12"
+                                    }
+                                ]
+                            },
+                            {
+                                "id": 44,
+                                "nombre": "Acetato amónico",
+                                "productosfitosanitarios": [
+                                    {
+                                        "id": 3,
+                                        "nombre": "Serifel",
+                                        "url": "www.caracteristicas.producto.3"
+                                    },
+                                    {
+                                        "id": 26,
+                                        "nombre": "Century LX",
+                                        "url": "www.caracteristicas.producto.26"
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "id": 64,
+                        "nombreVulgar": "Hongos",
+                        "nombreCientifico": "Hongo cientifico",
+                        "url": "www.hongo.com",
+                        "sustanciasActivas": [
+                            {
+                                "id": 36,
+                                "nombre": "DB",
+                                "productosfitosanitarios": [
+                                    {
+                                        "id": 10,
+                                        "nombre": "Atominal",
+                                        "url": "www.caracteristicas.producto.10"
+                                    },
+                                    {
+                                        "id": 17,
+                                        "nombre": "Sporgon",
+                                        "url": "www.caracteristicas.producto.17"
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "id": 76,
+        "nombre": "Cereal",
+        "lista_especies": [
+            {
+                "id": 67,
+                "nombreVulgar": "Raiz",
+                "nombreCientifico": "Raiz cientifico",
+                "posiblesPlagas": [
+                    {
+                        "id": 54,
+                        "nombreVulgar": "Araña Roja",
+                        "nombreCientifico": "Araña roja cientifica",
+                        "url": "www.arañaroja.com",
+                        "sustanciasActivas": [
+                            {
+                                "id": 32,
+                                "nombre": "metilciclopropeno",
+                                "productosfitosanitarios": [
+                                    {
+                                        "id": 1,
+                                        "nombre": "Opponent",
+                                        "url": "www.caracteristicas.producto.1"
+                                    },
+                                    {
+                                        "id": 12,
+                                        "nombre": "Delan Pro",
+                                        "url": "www.caracteristicas.producto.12"
+                                    }
+                                ]
+                            },
+                            {
+                                "id": 42,
+                                "nombre": "Acequinocilo",
+                                "productosfitosanitarios": [
+                                    {
+                                        "id": 20,
+                                        "nombre": "Enervin SC",
+                                        "url": "www.caracteristicas.producto.20"
+                                    },
+                                    {
+                                        "id": 24,
+                                        "nombre": "Caramba EC",
+                                        "url": "www.caracteristicas.producto.24"
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "id": 55,
+                        "nombreVulgar": "Mariposa del geranio",
+                        "nombreCientifico": "Mariposa del geranio cientifica",
+                        "url": "www.mariposageranio.com",
+                        "sustanciasActivas": [
+                            {
+                                "id": 32,
+                                "nombre": "metilciclopropeno",
+                                "productosfitosanitarios": [
+                                    {
+                                        "id": 1,
+                                        "nombre": "Opponent",
+                                        "url": "www.caracteristicas.producto.1"
+                                    },
+                                    {
+                                        "id": 12,
+                                        "nombre": "Delan Pro",
+                                        "url": "www.caracteristicas.producto.12"
+                                    }
+                                ]
+                            },
+                            {
+                                "id": 43,
+                                "nombre": "Acetamiprid",
+                                "productosfitosanitarios": [
+                                    {
+                                        "id": 2,
+                                        "nombre": "Surround WP",
+                                        "url": "www.caracteristicas.producto.2"
+                                    },
+                                    {
+                                        "id": 25,
+                                        "nombre": "Vision Plus",
+                                        "url": "www.caracteristicas.producto.25"
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "id": 63,
+                        "nombreVulgar": "Carcoma",
+                        "nombreCientifico": "Carcoma cientifico",
+                        "url": "www.pulgon.com",
+                        "sustanciasActivas": [
+                            {
+                                "id": 36,
+                                "nombre": "DB",
+                                "productosfitosanitarios": [
+                                    {
+                                        "id": 10,
+                                        "nombre": "Atominal",
+                                        "url": "www.caracteristicas.producto.10"
+                                    },
+                                    {
+                                        "id": 17,
+                                        "nombre": "Sporgon",
+                                        "url": "www.caracteristicas.producto.17"
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "id": 69,
+                "nombreVulgar": "Arroz",
+                "nombreCientifico": "Arroz cientifico",
+                "posiblesPlagas": [
+                    {
+                        "id": 54,
+                        "nombreVulgar": "Araña Roja",
+                        "nombreCientifico": "Araña roja cientifica",
+                        "url": "www.arañaroja.com",
+                        "sustanciasActivas": [
+                            {
+                                "id": 32,
+                                "nombre": "metilciclopropeno",
+                                "productosfitosanitarios": [
+                                    {
+                                        "id": 1,
+                                        "nombre": "Opponent",
+                                        "url": "www.caracteristicas.producto.1"
+                                    },
+                                    {
+                                        "id": 12,
+                                        "nombre": "Delan Pro",
+                                        "url": "www.caracteristicas.producto.12"
+                                    }
+                                ]
+                            },
+                            {
+                                "id": 42,
+                                "nombre": "Acequinocilo",
+                                "productosfitosanitarios": [
+                                    {
+                                        "id": 20,
+                                        "nombre": "Enervin SC",
+                                        "url": "www.caracteristicas.producto.20"
+                                    },
+                                    {
+                                        "id": 24,
+                                        "nombre": "Caramba EC",
+                                        "url": "www.caracteristicas.producto.24"
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "id": 57,
+                        "nombreVulgar": "Caracol",
+                        "nombreCientifico": "caracol cientifico",
+                        "url": "www.caracol.com",
+                        "sustanciasActivas": [
+                            {
+                                "id": 33,
+                                "nombre": "naftilacetamida",
+                                "productosfitosanitarios": [
+                                    {
+                                        "id": 5,
+                                        "nombre": "Sercadis",
+                                        "url": "www.caracteristicas.producto.5"
+                                    },
+                                    {
+                                        "id": 13,
+                                        "nombre": "Karbicure 85 SP",
+                                        "url": "www.caracteristicas.producto.13"
+                                    }
+                                ]
+                            },
+                            {
+                                "id": 45,
+                                "nombre": "Acibenzolar-s-metil",
+                                "productosfitosanitarios": [
+                                    {
+                                        "id": 4,
+                                        "nombre": "RAK 5+6",
+                                        "url": "www.caracteristicas.producto.4"
+                                    },
+                                    {
+                                        "id": 27,
+                                        "nombre": "Stomp Agua",
+                                        "url": "www.caracteristicas.producto.27"
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "id": 65,
+                        "nombreVulgar": "Oruga",
+                        "nombreCientifico": "Oruga cientifica",
+                        "url": "www.oruga.com",
+                        "sustanciasActivas": [
+                            {
+                                "id": 37,
+                                "nombre": "nitroguayacolato de sodio",
+                                "productosfitosanitarios": [
+                                    {
+                                        "id": 10,
+                                        "nombre": "Atominal",
+                                        "url": "www.caracteristicas.producto.10"
+                                    },
+                                    {
+                                        "id": 18,
+                                        "nombre": "PicoMx",
+                                        "url": "www.caracteristicas.producto.18"
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "id": 70,
+                "nombreVulgar": "Maiz",
+                "nombreCientifico": "Maiz cientifico",
+                "posiblesPlagas": [
+                    {
+                        "id": 51,
+                        "nombreVulgar": "Pulgon",
+                        "nombreCientifico": "pulgon cientifico",
+                        "url": "www.pulgon.com",
+                        "sustanciasActivas": [
+                            {
+                                "id": 31,
+                                "nombre": "Decanol",
+                                "productosfitosanitarios": [
+                                    {
+                                        "id": 1,
+                                        "nombre": "Opponent",
+                                        "url": "www.caracteristicas.producto.1"
+                                    },
+                                    {
+                                        "id": 11,
+                                        "nombre": "Cabrio WG",
+                                        "url": "www.caracteristicas.producto.11"
+                                    }
+                                ]
+                            },
+                            {
+                                "id": 39,
+                                "nombre": "hidroxiquinoleina",
+                                "productosfitosanitarios": [
+                                    {
+                                        "id": 15,
+                                        "nombre": "Priaxor EC",
+                                        "url": "www.caracteristicas.producto.15"
+                                    },
+                                    {
+                                        "id": 21,
+                                        "nombre": "Scala",
+                                        "url": "www.caracteristicas.producto.21"
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "id": 58,
+                        "nombreVulgar": "Babosa",
+                        "nombreCientifico": "babosa cientifica",
+                        "url": "www.babosa.com",
+                        "sustanciasActivas": [
+                            {
+                                "id": 33,
+                                "nombre": "naftilacetamida",
+                                "productosfitosanitarios": [
+                                    {
+                                        "id": 5,
+                                        "nombre": "Sercadis",
+                                        "url": "www.caracteristicas.producto.5"
+                                    },
+                                    {
+                                        "id": 13,
+                                        "nombre": "Karbicure 85 SP",
+                                        "url": "www.caracteristicas.producto.13"
+                                    }
+                                ]
+                            },
+                            {
+                                "id": 46,
+                                "nombre": "Ácido S-abscísico",
+                                "productosfitosanitarios": [
+                                    {
+                                        "id": 6,
+                                        "nombre": "Zarpa",
+                                        "url": "www.caracteristicas.producto.6"
+                                    },
+                                    {
+                                        "id": 28,
+                                        "nombre": "Biathlon 4D",
+                                        "url": "www.caracteristicas.producto.28"
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "id": 66,
+                        "nombreVulgar": "Minador",
+                        "nombreCientifico": "Minador cientifico",
+                        "url": "www.minador.com",
+                        "sustanciasActivas": [
+                            {
+                                "id": 38,
+                                "nombre": "benzyladenina ",
+                                "productosfitosanitarios": [
+                                    {
+                                        "id": 15,
+                                        "nombre": "Priaxor EC",
+                                        "url": "www.caracteristicas.producto.15"
+                                    },
+                                    {
+                                        "id": 19,
+                                        "nombre": "Enervin Duo SC",
+                                        "url": "www.caracteristicas.producto.19"
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "id": 77,
+        "nombre": "Fruta",
+        "lista_especies": [
+            {
+                "id": 67,
+                "nombreVulgar": "Raiz",
+                "nombreCientifico": "Raiz cientifico",
+                "posiblesPlagas": [
+                    {
+                        "id": 54,
+                        "nombreVulgar": "Araña Roja",
+                        "nombreCientifico": "Araña roja cientifica",
+                        "url": "www.arañaroja.com",
+                        "sustanciasActivas": [
+                            {
+                                "id": 32,
+                                "nombre": "metilciclopropeno",
+                                "productosfitosanitarios": [
+                                    {
+                                        "id": 1,
+                                        "nombre": "Opponent",
+                                        "url": "www.caracteristicas.producto.1"
+                                    },
+                                    {
+                                        "id": 12,
+                                        "nombre": "Delan Pro",
+                                        "url": "www.caracteristicas.producto.12"
+                                    }
+                                ]
+                            },
+                            {
+                                "id": 42,
+                                "nombre": "Acequinocilo",
+                                "productosfitosanitarios": [
+                                    {
+                                        "id": 20,
+                                        "nombre": "Enervin SC",
+                                        "url": "www.caracteristicas.producto.20"
+                                    },
+                                    {
+                                        "id": 24,
+                                        "nombre": "Caramba EC",
+                                        "url": "www.caracteristicas.producto.24"
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "id": 55,
+                        "nombreVulgar": "Mariposa del geranio",
+                        "nombreCientifico": "Mariposa del geranio cientifica",
+                        "url": "www.mariposageranio.com",
+                        "sustanciasActivas": [
+                            {
+                                "id": 32,
+                                "nombre": "metilciclopropeno",
+                                "productosfitosanitarios": [
+                                    {
+                                        "id": 1,
+                                        "nombre": "Opponent",
+                                        "url": "www.caracteristicas.producto.1"
+                                    },
+                                    {
+                                        "id": 12,
+                                        "nombre": "Delan Pro",
+                                        "url": "www.caracteristicas.producto.12"
+                                    }
+                                ]
+                            },
+                            {
+                                "id": 43,
+                                "nombre": "Acetamiprid",
+                                "productosfitosanitarios": [
+                                    {
+                                        "id": 2,
+                                        "nombre": "Surround WP",
+                                        "url": "www.caracteristicas.producto.2"
+                                    },
+                                    {
+                                        "id": 25,
+                                        "nombre": "Vision Plus",
+                                        "url": "www.caracteristicas.producto.25"
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "id": 63,
+                        "nombreVulgar": "Carcoma",
+                        "nombreCientifico": "Carcoma cientifico",
+                        "url": "www.pulgon.com",
+                        "sustanciasActivas": [
+                            {
+                                "id": 36,
+                                "nombre": "DB",
+                                "productosfitosanitarios": [
+                                    {
+                                        "id": 10,
+                                        "nombre": "Atominal",
+                                        "url": "www.caracteristicas.producto.10"
+                                    },
+                                    {
+                                        "id": 17,
+                                        "nombre": "Sporgon",
+                                        "url": "www.caracteristicas.producto.17"
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "id": 71,
+                "nombreVulgar": "Acida",
+                "nombreCientifico": "Acida cientifica",
+                "posiblesPlagas": [
+                    {
+                        "id": 51,
+                        "nombreVulgar": "Pulgon",
+                        "nombreCientifico": "pulgon cientifico",
+                        "url": "www.pulgon.com",
+                        "sustanciasActivas": [
+                            {
+                                "id": 31,
+                                "nombre": "Decanol",
+                                "productosfitosanitarios": [
+                                    {
+                                        "id": 1,
+                                        "nombre": "Opponent",
+                                        "url": "www.caracteristicas.producto.1"
+                                    },
+                                    {
+                                        "id": 11,
+                                        "nombre": "Cabrio WG",
+                                        "url": "www.caracteristicas.producto.11"
+                                    }
+                                ]
+                            },
+                            {
+                                "id": 39,
+                                "nombre": "hidroxiquinoleina",
+                                "productosfitosanitarios": [
+                                    {
+                                        "id": 15,
+                                        "nombre": "Priaxor EC",
+                                        "url": "www.caracteristicas.producto.15"
+                                    },
+                                    {
+                                        "id": 21,
+                                        "nombre": "Scala",
+                                        "url": "www.caracteristicas.producto.21"
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "id": 59,
+                        "nombreVulgar": "Hormiga",
+                        "nombreCientifico": "Hormiga cientifica",
+                        "url": "www.hormiga.com",
+                        "sustanciasActivas": [
+                            {
+                                "id": 34,
+                                "nombre": "naftilacético",
+                                "productosfitosanitarios": [
+                                    {
+                                        "id": 5,
+                                        "nombre": "Sercadis",
+                                        "url": "www.caracteristicas.producto.5"
+                                    },
+                                    {
+                                        "id": 14,
+                                        "nombre": "Enervin Pro",
+                                        "url": "www.caracteristicas.producto.14"
+                                    }
+                                ]
+                            },
+                            {
+                                "id": 47,
+                                "nombre": "Ácido giberélico",
+                                "productosfitosanitarios": [
+                                    {
+                                        "id": 7,
+                                        "nombre": "Tessior",
+                                        "url": "www.caracteristicas.producto.7"
+                                    },
+                                    {
+                                        "id": 29,
+                                        "nombre": "Signum",
+                                        "url": "www.caracteristicas.producto.29"
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "id": 78,
+        "nombre": "Olivo",
+        "lista_especies": [
+            {
+                "id": 72,
+                "nombreVulgar": "Dulce",
+                "nombreCientifico": "Dulce cientifico",
+                "posiblesPlagas": [
+                    {
+                        "id": 52,
+                        "nombreVulgar": "Cochinilla",
+                        "nombreCientifico": "Cochinilla cientifica",
+                        "url": "www.cochinilla.com",
+                        "sustanciasActivas": [
+                            {
+                                "id": 31,
+                                "nombre": "Decanol",
+                                "productosfitosanitarios": [
+                                    {
+                                        "id": 1,
+                                        "nombre": "Opponent",
+                                        "url": "www.caracteristicas.producto.1"
+                                    },
+                                    {
+                                        "id": 11,
+                                        "nombre": "Cabrio WG",
+                                        "url": "www.caracteristicas.producto.11"
+                                    }
+                                ]
+                            },
+                            {
+                                "id": 40,
+                                "nombre": "ABE-IT 56",
+                                "productosfitosanitarios": [
+                                    {
+                                        "id": 20,
+                                        "nombre": "Enervin SC",
+                                        "url": "www.caracteristicas.producto.20"
+                                    },
+                                    {
+                                        "id": 22,
+                                        "nombre": "Forum Gold",
+                                        "url": "www.caracteristicas.producto.22"
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "id": 60,
+                        "nombreVulgar": "Avispa",
+                        "nombreCientifico": "Avispa cientifico",
+                        "url": "www.avispa.com",
+                        "sustanciasActivas": [
+                            {
+                                "id": 34,
+                                "nombre": "naftilacético",
+                                "productosfitosanitarios": [
+                                    {
+                                        "id": 5,
+                                        "nombre": "Sercadis",
+                                        "url": "www.caracteristicas.producto.5"
+                                    },
+                                    {
+                                        "id": 14,
+                                        "nombre": "Enervin Pro",
+                                        "url": "www.caracteristicas.producto.14"
+                                    }
+                                ]
+                            },
+                            {
+                                "id": 48,
+                                "nombre": "Ácidos grasos",
+                                "productosfitosanitarios": [
+                                    {
+                                        "id": 8,
+                                        "nombre": "Dash HC",
+                                        "url": "www.caracteristicas.producto.8"
+                                    },
+                                    {
+                                        "id": 30,
+                                        "nombre": "Doryoku",
+                                        "url": "www.caracteristicas.producto.30"
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "id": 74,
+                "nombreVulgar": "Virgen Extra",
+                "nombreCientifico": "Virgen extra cientifico",
+                "posiblesPlagas": [
+                    {
+                        "id": 51,
+                        "nombreVulgar": "Pulgon",
+                        "nombreCientifico": "pulgon cientifico",
+                        "url": "www.pulgon.com",
+                        "sustanciasActivas": [
+                            {
+                                "id": 31,
+                                "nombre": "Decanol",
+                                "productosfitosanitarios": [
+                                    {
+                                        "id": 1,
+                                        "nombre": "Opponent",
+                                        "url": "www.caracteristicas.producto.1"
+                                    },
+                                    {
+                                        "id": 11,
+                                        "nombre": "Cabrio WG",
+                                        "url": "www.caracteristicas.producto.11"
+                                    }
+                                ]
+                            },
+                            {
+                                "id": 39,
+                                "nombre": "hidroxiquinoleina",
+                                "productosfitosanitarios": [
+                                    {
+                                        "id": 15,
+                                        "nombre": "Priaxor EC",
+                                        "url": "www.caracteristicas.producto.15"
+                                    },
+                                    {
+                                        "id": 21,
+                                        "nombre": "Scala",
+                                        "url": "www.caracteristicas.producto.21"
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "id": 62,
+                        "nombreVulgar": "Termita",
+                        "nombreCientifico": "termita cientifica",
+                        "url": "www.termita.com",
+                        "sustanciasActivas": [
+                            {
+                                "id": 35,
+                                "nombre": "dimetilnaftaleno",
+                                "productosfitosanitarios": [
+                                    {
+                                        "id": 5,
+                                        "nombre": "Sercadis",
+                                        "url": "www.caracteristicas.producto.5"
+                                    },
+                                    {
+                                        "id": 16,
+                                        "nombre": "Nemesys M",
+                                        "url": "www.caracteristicas.producto.16"
+                                    }
+                                ]
+                            },
+                            {
+                                "id": 50,
+                                "nombre": "Acrinatrin",
+                                "productosfitosanitarios": [
+                                    {
+                                        "id": 9,
+                                        "nombre": "Gazel",
+                                        "url": "www.caracteristicas.producto.9"
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "id": 73,
+                "nombreVulgar": "Salada",
+                "nombreCientifico": "Salada cientifico",
+                "posiblesPlagas": [
+                    {
+                        "id": 52,
+                        "nombreVulgar": "Cochinilla",
+                        "nombreCientifico": "Cochinilla cientifica",
+                        "url": "www.cochinilla.com",
+                        "sustanciasActivas": [
+                            {
+                                "id": 31,
+                                "nombre": "Decanol",
+                                "productosfitosanitarios": [
+                                    {
+                                        "id": 1,
+                                        "nombre": "Opponent",
+                                        "url": "www.caracteristicas.producto.1"
+                                    },
+                                    {
+                                        "id": 11,
+                                        "nombre": "Cabrio WG",
+                                        "url": "www.caracteristicas.producto.11"
+                                    }
+                                ]
+                            },
+                            {
+                                "id": 40,
+                                "nombre": "ABE-IT 56",
+                                "productosfitosanitarios": [
+                                    {
+                                        "id": 20,
+                                        "nombre": "Enervin SC",
+                                        "url": "www.caracteristicas.producto.20"
+                                    },
+                                    {
+                                        "id": 22,
+                                        "nombre": "Forum Gold",
+                                        "url": "www.caracteristicas.producto.22"
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "id": 61,
+                        "nombreVulgar": "Procesionaria",
+                        "nombreCientifico": "Procesionaria cientifico",
+                        "url": "www.procesionaria.com",
+                        "sustanciasActivas": [
+                            {
+                                "id": 35,
+                                "nombre": "dimetilnaftaleno",
+                                "productosfitosanitarios": [
+                                    {
+                                        "id": 5,
+                                        "nombre": "Sercadis",
+                                        "url": "www.caracteristicas.producto.5"
+                                    },
+                                    {
+                                        "id": 16,
+                                        "nombre": "Nemesys M",
+                                        "url": "www.caracteristicas.producto.16"
+                                    }
+                                ]
+                            },
+                            {
+                                "id": 49,
+                                "nombre": "Aclonifen",
+                                "productosfitosanitarios": []
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    }
+]

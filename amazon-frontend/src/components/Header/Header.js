@@ -5,9 +5,18 @@ import SearchBar from "./SearchBar";
 import { ReactComponent as UsaFlag } from "../../assets/usaicon.svg";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
-import { faMapMarkerAlt, faCaretDown } from "@fortawesome/free-solid-svg-icons";
+import {
+  faMapMarkerAlt,
+  faCaretDown,
+  faBars,
+} from "@fortawesome/free-solid-svg-icons";
+import SideMenu from "../SideMenu/SideMenu";
 
 export default function Header() {
+  const onOpenSideMenu = (e) => {
+    e.preventDefault();
+  };
+
   return (
     <div>
       <div id="header-container">
@@ -62,7 +71,51 @@ export default function Header() {
         </div>
       </div>
 
-      <div></div>
+      <div id="header-navbar">
+        <div className="nav-left">
+          <a href="/" className="hamburger-menu" onClick={onOpenSideMenu}>
+            <FontAwesomeIcon className="iconbars" icon={faBars} />
+            <span>All</span>
+          </a>
+
+          <a href="/">
+            <span>Today's Deals</span>
+          </a>
+
+          <a href="/">
+            <span>Buy Again</span>
+          </a>
+
+          <a href="/">
+            <span>Browsing History</span>
+            <FontAwesomeIcon className="icondown" icon={faCaretDown} />
+          </a>
+
+          <a href="/">
+            <span>Customer Service</span>
+          </a>
+
+          <a href="/">
+            <span>Registry</span>
+          </a>
+
+          <a href="/">
+            <span>Gift Cards</span>
+          </a>
+
+          <a href="/">
+            <span>Sell</span>
+          </a>
+        </div>
+
+        <div className="nav-right">
+          <a href="/">
+            <span>Amazon's response to COVID-19</span>
+          </a>
+        </div>
+      </div>
+
+      <SideMenu />
     </div>
   );
 }
