@@ -2,29 +2,70 @@
   position: absolute;
   z-index: 10;
   top: 0;
+  width: 24em;
+  height: 100%;
+
+  opacity: 0;
+  pointer-events: none;
+  transition: all ease 0.3s;
+}
+
+#container-side-menus
+{
+
+    flex: 1;
+    overflow: hidden;
+    position:  relative;
+
+}
+
+
+#sidemenu-bg-transparent {
+  position: absolute;
+  z-index: 9;
+  top: 0;
   width: 100%;
   height: 100%;
   background-color: rgba(0, 0, 0, 0.5);
+  opacity: 0;
+  pointer-events: none;
+  transition: all ease 0.3s;
+}
+
+#sidemenu-bg-transparent.opened {
+  opacity: 1;
+  pointer-events: all;
+}
+
+#sidemenu.opened {
+  opacity: 1;
+  pointer-events: all;
 }
 
 #sidemenu .icon-close-sidemenu {
   position: absolute;
-  left: 14em;
+  left: 13em;
   color: white;
   font-size: 30px;
   top: 12px;
   z-index: 30;
+  cursor: pointer;
 }
 
 #sidemenu .navigation-drawer {
   background-color: white;
   position: absolute;
-  width: 24em;
+  width: 100%;
   height: 100%;
   top: 0;
-  left: 0;
+  left: -500px;
   display: flex;
   flex-direction: column;
+  transition: all ease 0.3s;
+}
+
+#sidemenu.opened .navigation-drawer {
+  left: 0;
 }
 
 #sidemenu .navigation-drawer .header-user {
@@ -56,9 +97,36 @@
 }
 
 #sidemenu .navigation-drawer .menu-content {
-  flex: 1;
-  overflow-y: auto;
-  padding-top: 1em;
+    overflow-y: auto;
+    padding-top: 0.5em;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transition: all ease 0.6s;
+}
+
+#sidemenu .navigation-drawer .menu-content.sub-categories
+{
+
+    left: 100%;
+
+}
+
+
+#sidemenu .navigation-drawer .menu-content.main.opened-subcategories,
+#sidemenu .navigation-drawer .menu-content.sub-categories.opened-subcategories 
+{
+
+    transform: translateX(-100%);
+
+}
+
+
+
+
+#sidemenu .navigation-drawer .menu-content.subcategories {
 }
 
 #sidemenu .navigation-drawer .menu-content .navigation-drawer-menu {
@@ -68,6 +136,21 @@
   transition: all ease 0.5s;
   overflow: hidden;
 }
+
+
+#sidemenu .navigation-drawer .menu-content .navigation-drawer-menu.sub-categories
+{
+/*
+    position: absolute;
+    width: 100%;
+    background-color: white;
+    top: 0;
+    left:0;
+    left: 100%;
+    */
+
+}
+
 
 #sidemenu
   .navigation-drawer
@@ -105,6 +188,31 @@
   padding: 10px 20px 10px 40px;
   text-decoration: none;
   flex: 1;
+}
+
+#sidemenu
+  .navigation-drawer
+  .menu-content
+  .navigation-drawer-menu
+  li.title-sub-categories-menu
+  a {
+  justify-content: flex-start;
+  cursor: pointer;
+}
+
+
+
+
+
+#sidemenu
+  .navigation-drawer
+  .menu-content
+  .navigation-drawer-menu
+  li.title-sub-categories-menu
+  a
+  span {
+  margin-left: 12px;
+  font-weight: bold;
 }
 
 #sidemenu

@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import "../../styles/Header.css";
 import amazonlogo from "../../assets/amazonlogo.png";
 import SearchBar from "./SearchBar";
@@ -13,9 +13,15 @@ import {
 import SideMenu from "../SideMenu/SideMenu";
 
 export default function Header() {
+  const [sidemenuisopened, setsidemenuisopened] = useState(false);
+
   const onOpenSideMenu = (e) => {
     e.preventDefault();
+
+    setsidemenuisopened(true);
   };
+
+  const onCloseSideMenu = () => setsidemenuisopened(false);
 
   return (
     <div>
@@ -115,7 +121,7 @@ export default function Header() {
         </div>
       </div>
 
-      <SideMenu />
+      <SideMenu opened={sidemenuisopened} onCloseSideMenu={onCloseSideMenu} />
     </div>
   );
 }

@@ -1,3 +1,5 @@
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+
 export const getCategories = () => [
   {
     headertitle: "All Departments",
@@ -74,13 +76,6 @@ export const getCategories = () => [
     description: "Shop kindle books",
     categorylevel: "main",
   },
-  /*{
-    headertitle: 'Prime Video',
-    displayname: "Prime Video",
-    slug: "primevideo",
-    description: 'TV Shows, Documentaries , Movies and much more',
-  },
-  */
   {
     headertitle: "The Women's Shop",
     displayname: "Women's Fashion",
@@ -183,18 +178,6 @@ export const getCategories = () => [
     description:
       "Shop suitcases, carry-ons, backpacks, travel totes, kids luggage and more",
   },
-  /*{
-    headertitle: "",
-    displayname: "Movies & TV",
-    slug: "moviestv",
-    description: ""
-  },
-  {
-    headertitle: "",
-    displayname: "Music, CDs & Vinyl",
-    slug: "musiccdvinyl",
-    description: ""
-  },*/
   {
     headertitle: "Pet Supplies",
     displayname: "Pet Supplies",
@@ -274,12 +257,15 @@ export const getCategories = () => [
   },
 ];
 
-export const getMainCategories = () => {
-  return getCategories().filter((item) => item.categorylevel === "main");
-};
+export const getMainCategories = () =>
+  getCategories().filter((item) => item.categorylevel === "main");
 
-export const getCategoryBySlug = (slug) => {
-  const category = getCategories().filter((item) => item.slug === slug);
+export const getCategoryBySlug = (slug) =>
+  getCategories().filter((item) => item.slug === slug)[0];
 
-  return category[0];
-};
+export const getSubCategories = (parentslug) =>
+  getCategories().filter((item) => item.parentslug === parentslug);
+
+export const fonticon = (icon, css_classes, onclick_callback) => (
+  <FontAwesomeIcon onClick={onclick_callback} className={css_classes} icon={icon} />
+);

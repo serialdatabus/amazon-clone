@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from "react";
 import "../../styles/SideMenu.css";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faChevronRight,
   faChevronDown,
@@ -8,66 +7,20 @@ import {
   faUser,
   faTimes,
   faGlobe,
+  faArrowLeft,
 } from "@fortawesome/free-solid-svg-icons";
-import { getMainCategories } from "../../helpers/helpers";
+import {
+  getMainCategories,
+  getSubCategories,
+  fonticon,
+  getCategoryBySlug,
+} from "../../helpers/helpers";
 
-const renderCategories = (categories_to_render, section_title, customclass) => (
-  <ul className={"navigation-drawer-menu " + customclass}>
-    {section_title && (
-      <li>
-        <span className="title-menu">{section_title}</span>
-      </li>
-    )}
-
-    {categories_to_render.map((item) => {
-      return (
-        <li key={item.slug}>
-          <a href="/">
-            <span>{item.displayname}</span>
-
-            <FontAwesomeIcon
-              className="icon-open-submenu"
-              icon={faChevronRight}
-            />
-          </a>
-        </li>
-      );
-    })}
-  </ul>
-);
-
-const renderSettings = () => {
-  return (
-    <>
-      <li className="list-divisor"></li>
-      <li>
-        <span className="title-menu">Help & Settings</span>
-      </li>
-      <li>
-        <a href="/">
-          <span>Your Account</span>
-        </a>
-      </li>
-
-      <li className="list-settings">
-        <a href="/">
-          <FontAwesomeIcon className="icon-open-submenu" icon={faGlobe} />
-          <span>English</span>
-        </a>
-      </li>
-      <li>
-        <a href="/">
-          <span>Sign Out</span>
-        </a>
-      </li>
-    </>
-  );
-};
-
-export default function SideMenu({ opened }) {
+export default function SideMenu({ opened, onCloseSideMenu }) {
   const [firstfourcategories, setfirstfourcategories] = useState([]);
   const [remaincategories, setremaincategories] = useState([]);
   const [showallcategories, setshowallcategories] = useState(false);
+  const [subcategoriesisopened, setsubcategoriesisopened] = useState(false);
 
   useEffect(() => {
     setfirstfourcategories(getMainCategories().slice(0, 4));
@@ -76,55 +29,177 @@ export default function SideMenu({ opened }) {
     return () => {};
   }, []);
 
-  return (
-    <div className="sidemenu" id="sidemenu">
-      <FontAwesomeIcon
-        color="white"
-        className="icon-close-sidemenu"
-        icon={faTimes}
-      />
+  const navigateToCategoryPage = (e) => {
+    e.preventDefault();
+    onCloseSideMenu();
+   
+  };
 
-      <div className="navigation-drawer">
-        <div className="header-user">
-          <FontAwesomeIcon color="white" className="icon-user" icon={faUser} />
-          <a href="/">Hello, Elizeu</a>
+  const openSubCategories = (e) => {
+    e.preventDefault();
+    
+
+    setsubcategoriesisopened(true);
+
+
+  };
+
+  const gobackToMainMenu = (e) => {
+    e.preventDefault();
+      setsubcategoriesisopened(false);
+
+  }
+
+  // start rendering functions
+
+  const renderTransparentBackground = () => (
+    <div
+      onClick={onCloseSideMenu}
+      id="sidemenu-bg-transparent"
+      className={opened ? " opened" : ""}
+    ></div>
+  );
+
+  const renderCategories = (
+    categories_to_render,
+    section_title,
+    customclass
+  ) => (
+    <ul className={"navigation-drawer-menu " + customclass}>
+      {section_title && (
+        <li>
+          <span className="title-menu">{section_title}</span>
+        </li>
+      )}
+
+      {categories_to_render.map((item) => {
+        const subcategories = getSubCategories(item.slug);
+
+        return (
+          <li key={item.slug}>
+            <a
+              onClick={
+                subcategories.length == 0
+                  ? navigateToCategoryPage
+                  : openSubCategories
+              }
+              href="/"
+            >
+              <span>{item.displayname}</span>
+
+              {subcategories.length > 0 &&
+                fonticon(faChevronRight, "icon-open-submenu")}
+            </a>
+          </li>
+        );
+      })}
+    </ul>
+  );
+
+  const renderSettings = () => {
+    return (
+      <>
+        <li className="list-divisor"></li>
+        <li>
+          <span className="title-menu">Help & Settings</span>
+        </li>
+        <li>
+          <a href="/">
+            <span>Your Account</span>
+          </a>
+        </li>
+
+        <li className="list-settings">
+          <a href="/">
+            {fonticon(faGlobe, "icon-open-submenu")}
+            <span>English</span>
+          </a>
+        </li>
+        <li>
+          <a href="/">
+            <span>Sign Out</span>
+          </a>
+        </li>
+      </>
+    );
+  };
+
+  const renderSubCatSideMenu = () => {
+    return (
+      <ul className="navigation-drawer-menu sub-categories">
+        <li className="title-sub-categories-menu">
+          <a href="/" onClick={gobackToMainMenu}>
+            {fonticon(faArrowLeft, "icon-open-submenu")}
+            <span>MAIN MENU</span>
+          </a>
+        </li>
+
+        <li className="list-divisor"></li>
+        {renderCategories(
+          getSubCategories("software"),
+          getCategoryBySlug("software").displayname
+        )}
+      </ul>
+    );
+  };
+
+
+
+  const renderSeeAllButton = () => (
+    <li className="see-all-button">
+      <a
+        href="/"
+        onClick={(e) => {
+          e.preventDefault();
+          setshowallcategories(!showallcategories);
+        }}
+      >
+        <span>See All</span>
+        {!showallcategories && fonticon(faChevronDown, "icon-open-submenu")}
+        {showallcategories && fonticon(faChevronUp, "icon-open-submenu")}
+      </a>
+    </li>
+  );
+
+  // end rendering functions
+
+  return (
+    <>
+      {renderTransparentBackground()}
+
+      <div className={"sidemenu" + (opened ? " opened" : "")} id="sidemenu">
+        {fonticon(faTimes, "icon-close-sidemenu", onCloseSideMenu)}
+
+        <div className="navigation-drawer">
+          <div className="header-user">
+            {fonticon(faUser, "icon-user")}
+            <a href="/">Hello, Elizeu</a>
+          </div>
+
+        <div id="container-side-menus">
+        <div className={"menu-content main"+(subcategoriesisopened ? " opened-subcategories" : "")}>
+            {renderCategories(firstfourcategories, "Shop By department","main")}
+            {renderCategories(
+              remaincategories,
+              "",
+              "remain-categories-list main" + (showallcategories ? " expanded" : "")
+            )}
+
+            <ul className="navigation-drawer-menu main">
+              {renderSeeAllButton()}
+              {renderSettings("main")}
+            </ul>
+
+        
+          </div>
+        <div className={"menu-content sub-categories"+(subcategoriesisopened ? " opened-subcategories" : "")}>
+        {renderSubCatSideMenu()}
+        </div>
         </div>
 
-        <div className="menu-content">
-          {renderCategories(firstfourcategories, "Shop By department")}
-          {renderCategories(
-            remaincategories,
-            "",
-            "remain-categories-list" + (showallcategories ? " expanded" : "")
-          )}
-          <ul className={"navigation-drawer-menu"}>
-            <li class="see-all-button">
-              <a
-                href=""
-                onClick={(e) => {
-                  e.preventDefault();
-                  setshowallcategories(!showallcategories);
-                }}
-              >
-                <span>See All</span>
-                {!showallcategories && (
-                  <FontAwesomeIcon
-                    className="icon-open-submenu"
-                    icon={faChevronDown}
-                  />
-                )}
-                {showallcategories && (
-                  <FontAwesomeIcon
-                    className="icon-open-submenu"
-                    icon={faChevronUp}
-                  />
-                )}
-              </a>
-            </li>
-            {renderSettings()}
-          </ul>
+
         </div>
       </div>
-    </div>
+    </>
   );
 }
