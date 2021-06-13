@@ -18,6 +18,9 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 import SideMenu from "../SideMenu/SideMenu";
 import { fonticon } from "../../helpers/helpers";
+import { languageSelectMouseEvents } from "./controllers";
+
+
 
 export default function Header() {
   const [sidemenuisopened, setsidemenuisopened] = useState(false);
@@ -32,15 +35,6 @@ export default function Header() {
 
   const onCloseSideMenu = () => setsidemenuisopened(false);
 
-  const languageSelectMouseEvents = () => ({
-    onMouseEnter: () => {
-      dispatch(showTransparentBg());
-    },
-
-    onMouseLeave: () => {
-      dispatch(hideTransparentBg());
-    },
-  });
 
   return (
     <div>
@@ -65,7 +59,7 @@ export default function Header() {
 
         <div id="header-right" className="header-column">
           <a
-            {...languageSelectMouseEvents()}
+            {...languageSelectMouseEvents({dispatch,hideTransparentBg,showTransparentBg})}
             href="/"
             className="language-selector"
           >

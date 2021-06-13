@@ -15,6 +15,8 @@ import {
   fonticon,
   getCategoryBySlug,
 } from "../../helpers/helpers";
+import { navigateToCategoryPage  , resetSideMenuState , openSubCategories} from "./controllers";
+
 
 export default function SideMenu({ opened, onCloseSideMenu }) {
   const [firstfourcategories, setfirstfourcategories] = useState([]);
@@ -23,33 +25,44 @@ export default function SideMenu({ opened, onCloseSideMenu }) {
   const [subcategoriesisopened, setsubcategoriesisopened] = useState(false);
   const [currentSelectedCategory, setcurrentSelectedCategory] = useState("");
 
+  const localState = {  
+    firstfourcategories,
+    remaincategories,
+    showallcategories,
+    subcategoriesisopened,
+    currentSelectedCategory,
+    setfirstfourcategories,
+    setremaincategories,
+    setshowallcategories,
+    setsubcategoriesisopened,
+    setcurrentSelectedCategory,
+    onCloseSideMenu
+  }
+
   useEffect(() => {
+      
     setfirstfourcategories(getMainCategories().slice(0, 4));
     setremaincategories(getMainCategories().slice(4));
 
     return () => {};
   }, []);
 
-  const resetSideMenuState = () => {
-    setshowallcategories(false);
-    setsubcategoriesisopened(false);
-    setshowallcategories(false);
-  };
 
-  const navigateToCategoryPage = (e) => {
-    onCloseSideMenu();
-    resetSideMenuState();
-  };
 
-  const openSubCategories = (categoryslug) => {
-    setcurrentSelectedCategory(categoryslug);
-    setsubcategoriesisopened(true);
-  };
+
+
+
 
   const gobackToMainMenu = (e) => {
     e.preventDefault();
     setsubcategoriesisopened(false);
   };
+
+
+
+
+
+
 
   // start rendering functions
 
@@ -57,7 +70,7 @@ export default function SideMenu({ opened, onCloseSideMenu }) {
     <div
       onClick={() => {
         onCloseSideMenu();
-        resetSideMenuState();
+        resetSideMenuState(localState);
       }}
       id="sidemenu-bg-transparent"
       className={opened ? " opened" : ""}
@@ -87,9 +100,9 @@ export default function SideMenu({ opened, onCloseSideMenu }) {
                 e.preventDefault();
 
                 if (total_sub_cats_found === 0) {
-                  navigateToCategoryPage();
+                  navigateToCategoryPage(localState);
                 } else {
-                  openSubCategories(item.slug);
+                  openSubCategories({slug: item.slug,...localState});
                 }
               }}
               href="/"
