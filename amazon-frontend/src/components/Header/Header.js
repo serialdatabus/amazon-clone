@@ -3,18 +3,26 @@ import "../../styles/Header.css";
 import amazonlogo from "../../assets/amazonlogo.png";
 import SearchBar from "./SearchBar";
 import { ReactComponent as UsaFlag } from "../../assets/usaicon.svg";
+import { useDispatch, useSelector } from "react-redux";
+import {
+  showTransparentBg,
+  hideTransparentBg,
+} from "../../redux-slices/appslice";
 
 import {
   faMapMarkerAlt,
   faCaretDown,
   faBars,
   faShoppingBasket,
+  faMailBulk,
 } from "@fortawesome/free-solid-svg-icons";
 import SideMenu from "../SideMenu/SideMenu";
 import { fonticon } from "../../helpers/helpers";
 
 export default function Header() {
   const [sidemenuisopened, setsidemenuisopened] = useState(false);
+  const appstate = useSelector((state) => state.app);
+  const dispatch = useDispatch();
 
   const onOpenSideMenu = (e) => {
     e.preventDefault();
@@ -23,6 +31,16 @@ export default function Header() {
   };
 
   const onCloseSideMenu = () => setsidemenuisopened(false);
+
+  const languageSelectMouseEvents = () => ({
+    onMouseEnter: () => {
+      dispatch(showTransparentBg());
+    },
+
+    onMouseLeave: () => {
+      dispatch(hideTransparentBg());
+    },
+  });
 
   return (
     <div>
@@ -45,8 +63,12 @@ export default function Header() {
           <SearchBar />
         </div>
 
-        <div id="header-right" className="header-column">
-          <a href="/" className="language-selector">
+        <div id="header-right" onMou className="header-column">
+          <a
+            {...languageSelectMouseEvents()}
+            href="/"
+            className="language-selector"
+          >
             <UsaFlag width={24} />
             {fonticon(faCaretDown, "icondown")}
           </a>
