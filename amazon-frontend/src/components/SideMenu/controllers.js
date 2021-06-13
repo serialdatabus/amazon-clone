@@ -8,6 +8,7 @@ import {
 import {
   fonticon,
   getCategoryBySlug,
+  getMainCategories,
   getSubCategories,
 } from "../../helpers/helpers";
 
@@ -175,4 +176,12 @@ export const renderSettings = () => {
       </li>
     </>
   );
+};
+
+export const loadSideMenuCategories = ({
+  setfirstfourcategories,
+  setremaincategories,
+}) => {
+  setfirstfourcategories(getMainCategories().slice(0, 4));
+  setremaincategories(getMainCategories().slice(4));
 };

@@ -1,13 +1,14 @@
 import React, { useEffect, useState } from "react";
 import "../../styles/SideMenu.css";
 import { faUser, faTimes } from "@fortawesome/free-solid-svg-icons";
-import { getMainCategories, fonticon } from "../../helpers/helpers";
+import { fonticon } from "../../helpers/helpers";
 import {
   renderCategories,
   renderSeeAllButton,
   renderSubCatSideMenu,
   renderTransparentBackground,
   renderSettings,
+  loadSideMenuCategories,
 } from "./controllers";
 
 export default function SideMenu({ opened, onCloseSideMenu }) {
@@ -36,15 +37,11 @@ export default function SideMenu({ opened, onCloseSideMenu }) {
   };
 
   useEffect(() => {
-    setfirstfourcategories(getMainCategories().slice(0, 4));
-    setremaincategories(getMainCategories().slice(4));
-
-    return () => {};
+    loadSideMenuCategories({
+      setfirstfourcategories,
+      setremaincategories,
+    });
   }, []);
-
-  // start rendering functions
-
-  // end rendering functions
 
   return (
     <>
