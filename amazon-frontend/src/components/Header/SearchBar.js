@@ -1,6 +1,10 @@
 import React, { useEffect, useState } from "react";
 import { faCaretDown, faSearch } from "@fortawesome/free-solid-svg-icons";
-import { fonticon, getCategoryBySlug, getMainCategories } from "../../helpers/helpers";
+import {
+  fonticon,
+  getCategoryBySlug,
+  getMainCategories,
+} from "../../helpers/helpers";
 
 export default function SearchBar() {
   //states
@@ -22,7 +26,7 @@ export default function SearchBar() {
     <div id="header-searchbar">
       <div className="search-category-selector" onChange={onChangeCategory}>
         <span className="label">{currentcategory.displayname}</span>
-        {fonticon(faCaretDown,"icondown")}
+        {fonticon(faCaretDown, "icondown")}
         <select className="categories_list">
           {categorieslist.map((item, index) => {
             return (
@@ -37,8 +41,7 @@ export default function SearchBar() {
       <input type="text" />
 
       <a href="/" className="search-button">
-        
-        {fonticon(faSearch,"iconsearch")}
+        {fonticon(faSearch, "iconsearch")}
       </a>
     </div>
   );

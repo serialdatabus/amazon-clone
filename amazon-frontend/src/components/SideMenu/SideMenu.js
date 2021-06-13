@@ -43,7 +43,7 @@ export default function SideMenu({ opened, onCloseSideMenu }) {
 
   const openSubCategories = (categoryslug) => {
     setcurrentSelectedCategory(categoryslug);
-    setsubcategoriesisopened(true); 
+    setsubcategoriesisopened(true);
   };
 
   const gobackToMainMenu = (e) => {
@@ -55,7 +55,10 @@ export default function SideMenu({ opened, onCloseSideMenu }) {
 
   const renderTransparentBackground = () => (
     <div
-      onClick={() => {onCloseSideMenu(); resetSideMenuState(); }}
+      onClick={() => {
+        onCloseSideMenu();
+        resetSideMenuState();
+      }}
       id="sidemenu-bg-transparent"
       className={opened ? " opened" : ""}
     ></div>

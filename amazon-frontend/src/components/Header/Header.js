@@ -8,6 +8,8 @@ import {
   faMapMarkerAlt,
   faCaretDown,
   faBars,
+  faPlus,
+  faShoppingBasket,
 } from "@fortawesome/free-solid-svg-icons";
 import SideMenu from "../SideMenu/SideMenu";
 import { fonticon } from "../../helpers/helpers";
@@ -32,7 +34,7 @@ export default function Header() {
           </a>
 
           <a href="/" className="shiping-address-container">
-            <p className="shipping-address-send-to">Send to John</p>
+            <p className="shipping-address-send-to">Send to Elizeu</p>
             <p className="shipping-address">
               {fonticon(faMapMarkerAlt)}
               <span> 2845-093‌</span>
@@ -116,7 +118,8 @@ export default function Header() {
 
         <div className="nav-right">
           <a href="/">
-            <span>Amazon's response to COVID-19</span>
+            {fonticon(faShoppingBasket, "add-product-icon")}
+            <span>Add new product</span>
           </a>
         </div>
       </div>
