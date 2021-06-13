@@ -15,8 +15,11 @@ import {
   fonticon,
   getCategoryBySlug,
 } from "../../helpers/helpers";
-import { navigateToCategoryPage  , resetSideMenuState , openSubCategories} from "./controllers";
-
+import {
+  navigateToCategoryPage,
+  resetSideMenuState,
+  openSubCategories,
+} from "./controllers";
 
 export default function SideMenu({ opened, onCloseSideMenu }) {
   const [firstfourcategories, setfirstfourcategories] = useState([]);
@@ -25,7 +28,7 @@ export default function SideMenu({ opened, onCloseSideMenu }) {
   const [subcategoriesisopened, setsubcategoriesisopened] = useState(false);
   const [currentSelectedCategory, setcurrentSelectedCategory] = useState("");
 
-  const localState = {  
+  const localState = {
     firstfourcategories,
     remaincategories,
     showallcategories,
@@ -36,33 +39,20 @@ export default function SideMenu({ opened, onCloseSideMenu }) {
     setshowallcategories,
     setsubcategoriesisopened,
     setcurrentSelectedCategory,
-    onCloseSideMenu
-  }
+    onCloseSideMenu,
+  };
 
   useEffect(() => {
-      
     setfirstfourcategories(getMainCategories().slice(0, 4));
     setremaincategories(getMainCategories().slice(4));
 
     return () => {};
   }, []);
 
-
-
-
-
-
-
   const gobackToMainMenu = (e) => {
     e.preventDefault();
     setsubcategoriesisopened(false);
   };
-
-
-
-
-
-
 
   // start rendering functions
 
@@ -102,7 +92,7 @@ export default function SideMenu({ opened, onCloseSideMenu }) {
                 if (total_sub_cats_found === 0) {
                   navigateToCategoryPage(localState);
                 } else {
-                  openSubCategories({slug: item.slug,...localState});
+                  openSubCategories({ slug: item.slug, ...localState });
                 }
               }}
               href="/"
