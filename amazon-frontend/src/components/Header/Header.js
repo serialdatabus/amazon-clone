@@ -32,7 +32,7 @@ export default function Header() {
           </a>
 
           <a href="/" className="shiping-address-container">
-            <p className="shipping-address-send-to">Send to Elizeu</p>
+            <p className="shipping-address-send-to">Send to John</p>
             <p className="shipping-address">
               {fonticon(faMapMarkerAlt)}
               <span> 2845-093‌</span>
