@@ -3,7 +3,7 @@ import "../../styles/Header.css";
 import amazonlogo from "../../assets/amazonlogo.png";
 import SearchBar from "./SearchBar";
 import { ReactComponent as UsaFlag } from "../../assets/usaicon.svg";
-import { useDispatch, /*useSelector*/ } from "react-redux";
+import { useDispatch /*useSelector*/ } from "react-redux";
 import {
   showTransparentBg,
   hideTransparentBg,
@@ -20,8 +20,6 @@ import SideMenu from "../SideMenu/SideMenu";
 import { fonticon } from "../../helpers/helpers";
 import { languageSelectMouseEvents } from "./controllers";
 
-
-
 export default function Header() {
   const [sidemenuisopened, setsidemenuisopened] = useState(false);
   //const appstate = useSelector((state) => state.app);
@@ -34,7 +32,6 @@ export default function Header() {
   };
 
   const onCloseSideMenu = () => setsidemenuisopened(false);
-
 
   return (
     <div>
@@ -59,7 +56,11 @@ export default function Header() {
 
         <div id="header-right" className="header-column">
           <a
-            {...languageSelectMouseEvents({dispatch,hideTransparentBg,showTransparentBg})}
+            {...languageSelectMouseEvents({
+              dispatch,
+              hideTransparentBg,
+              showTransparentBg,
+            })}
             href="/"
             className="language-selector"
           >
