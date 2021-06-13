@@ -267,5 +267,9 @@ export const getSubCategories = (parentslug) =>
   getCategories().filter((item) => item.parentslug === parentslug);
 
 export const fonticon = (icon, css_classes, onclick_callback) => (
-  <FontAwesomeIcon onClick={onclick_callback} className={css_classes} icon={icon} />
+  <FontAwesomeIcon
+    onClick={onclick_callback}
+    className={css_classes}
+    icon={icon}
+  />
 );

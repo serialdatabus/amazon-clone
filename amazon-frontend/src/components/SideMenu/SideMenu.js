@@ -32,23 +32,18 @@ export default function SideMenu({ opened, onCloseSideMenu }) {
   const navigateToCategoryPage = (e) => {
     e.preventDefault();
     onCloseSideMenu();
-   
   };
 
   const openSubCategories = (e) => {
     e.preventDefault();
-    
 
     setsubcategoriesisopened(true);
-
-
   };
 
   const gobackToMainMenu = (e) => {
     e.preventDefault();
-      setsubcategoriesisopened(false);
-
-  }
+    setsubcategoriesisopened(false);
+  };
 
   // start rendering functions
 
@@ -143,8 +138,6 @@ export default function SideMenu({ opened, onCloseSideMenu }) {
     );
   };
 
-
-
   const renderSeeAllButton = () => (
     <li className="see-all-button">
       <a
@@ -176,28 +169,39 @@ export default function SideMenu({ opened, onCloseSideMenu }) {
             <a href="/">Hello, Elizeu</a>
           </div>
 
-        <div id="container-side-menus">
-        <div className={"menu-content main"+(subcategoriesisopened ? " opened-subcategories" : "")}>
-            {renderCategories(firstfourcategories, "Shop By department","main")}
-            {renderCategories(
-              remaincategories,
-              "",
-              "remain-categories-list main" + (showallcategories ? " expanded" : "")
-            )}
+          <div id="container-side-menus">
+            <div
+              className={
+                "menu-content main" +
+                (subcategoriesisopened ? " opened-subcategories" : "")
+              }
+            >
+              {renderCategories(
+                firstfourcategories,
+                "Shop By department",
+                "main"
+              )}
+              {renderCategories(
+                remaincategories,
+                "",
+                "remain-categories-list main" +
+                  (showallcategories ? " expanded" : "")
+              )}
 
-            <ul className="navigation-drawer-menu main">
-              {renderSeeAllButton()}
-              {renderSettings("main")}
-            </ul>
-
-        
+              <ul className="navigation-drawer-menu main">
+                {renderSeeAllButton()}
+                {renderSettings("main")}
+              </ul>
+            </div>
+            <div
+              className={
+                "menu-content sub-categories" +
+                (subcategoriesisopened ? " opened-subcategories" : "")
+              }
+            >
+              {renderSubCatSideMenu()}
+            </div>
           </div>
-        <div className={"menu-content sub-categories"+(subcategoriesisopened ? " opened-subcategories" : "")}>
-        {renderSubCatSideMenu()}
-        </div>
-        </div>
-
-
         </div>
       </div>
     </>

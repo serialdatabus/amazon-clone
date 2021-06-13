@@ -10,15 +10,11 @@
   transition: all ease 0.3s;
 }
 
-#container-side-menus
-{
-
-    flex: 1;
-    overflow: hidden;
-    position:  relative;
-
+#container-side-menus {
+  flex: 1;
+  overflow: hidden;
+  position: relative;
 }
-
 
 #sidemenu-bg-transparent {
   position: absolute;
@@ -97,34 +93,24 @@
 }
 
 #sidemenu .navigation-drawer .menu-content {
-    overflow-y: auto;
-    padding-top: 0.5em;
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    transition: all ease 0.6s;
+  overflow-y: auto;
+  padding-top: 0.5em;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  transition: all ease 0.6s;
 }
 
-#sidemenu .navigation-drawer .menu-content.sub-categories
-{
-
-    left: 100%;
-
+#sidemenu .navigation-drawer .menu-content.sub-categories {
+  left: 100%;
 }
-
 
 #sidemenu .navigation-drawer .menu-content.main.opened-subcategories,
-#sidemenu .navigation-drawer .menu-content.sub-categories.opened-subcategories 
-{
-
-    transform: translateX(-100%);
-
+#sidemenu .navigation-drawer .menu-content.sub-categories.opened-subcategories {
+  transform: translateX(-100%);
 }
-
-
-
 
 #sidemenu .navigation-drawer .menu-content.subcategories {
 }
@@ -137,10 +123,11 @@
   overflow: hidden;
 }
 
-
-#sidemenu .navigation-drawer .menu-content .navigation-drawer-menu.sub-categories
-{
-/*
+#sidemenu
+  .navigation-drawer
+  .menu-content
+  .navigation-drawer-menu.sub-categories {
+  /*
     position: absolute;
     width: 100%;
     background-color: white;
@@ -148,9 +135,7 @@
     left:0;
     left: 100%;
     */
-
 }
-
 
 #sidemenu
   .navigation-drawer
@@ -199,10 +184,6 @@
   justify-content: flex-start;
   cursor: pointer;
 }
-
-
-
-
 
 #sidemenu
   .navigation-drawer

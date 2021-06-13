@@ -205,34 +205,26 @@
   font-weight: bold;
 }
 
-
-#header-navbar
-{
-
+#header-navbar {
   background-color: #232f3e;
   display: flex;
   padding: 5px;
 }
 
-#header-navbar  .nav-right,
-#header-navbar  .nav-left
-{
+#header-navbar .nav-right,
+#header-navbar .nav-left {
   flex: 1 1;
- 
+
   display: flex;
   align-items: center;
 }
 
-#header-navbar  .nav-right
- {
-   justify-content: flex-end;
- }
+#header-navbar .nav-right {
+  justify-content: flex-end;
+}
 
-
-#header-navbar  .nav-right a,
-#header-navbar  .nav-left a
-{
-
+#header-navbar .nav-right a,
+#header-navbar .nav-left a {
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -240,65 +232,38 @@
   padding: 5px 12px;
   border: 1px solid rgba(255, 255, 255, 0);
   border-radius: 3px;
-
 }
 
-
-#header-navbar  .nav-left a.hamburger-menu
-{
+#header-navbar .nav-left a.hamburger-menu {
   padding: 5px 7px;
 }
 
-
-#header-navbar  .nav-left a .icondown
-{
-
+#header-navbar .nav-left a .icondown {
   color: #959595;
-  margin-left: 4px
+  margin-left: 4px;
 }
 
-#header-navbar  .nav-right a:hover,
-#header-navbar  .nav-left a:hover
-{
-
-
+#header-navbar .nav-right a:hover,
+#header-navbar .nav-left a:hover {
   border: 1px solid white;
-
-
 }
 
-#header-navbar  .nav-left a .iconbars
-{
-
+#header-navbar .nav-left a .iconbars {
   color: white;
-  margin-right: 5px;;
+  margin-right: 5px;
+}
 
-} 
-
-#header-navbar  .nav-right span,
-#header-navbar  .nav-left a span
-{
-
+#header-navbar .nav-right span,
+#header-navbar .nav-left a span {
   color: white;
   font-weight: bold;
   font-size: 0.9em;
-
-} 
-
-
-
-
+}
 
 #amazoncart {
-
-
-
 }
 
 #amazoncart::after {
-
-
-
 }
 
 #amazoncart .left-cart {
@@ -321,13 +286,7 @@
 }
 
 #amazoncart .center-cart {
-
-
-
 }
 
 #amazoncart .right-cart {
-
-
-
 }

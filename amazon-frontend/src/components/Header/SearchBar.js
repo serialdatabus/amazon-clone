@@ -41,7 +41,6 @@ export default function SearchBar() {
       <a href="/" className="search-button">
         <FontAwesomeIcon className="iconsearch" icon={faSearch} />
       </a>
-      
     </div>
   );
 }
