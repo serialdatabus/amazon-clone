@@ -3,7 +3,6 @@ import "../../styles/Header.css";
 import amazonlogo from "../../assets/amazonlogo.png";
 import SearchBar from "./SearchBar";
 import { ReactComponent as UsaFlag } from "../../assets/usaicon.svg";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 import {
   faMapMarkerAlt,
@@ -11,6 +10,7 @@ import {
   faBars,
 } from "@fortawesome/free-solid-svg-icons";
 import SideMenu from "../SideMenu/SideMenu";
+import { fonticon } from "../../helpers/helpers";
 
 export default function Header() {
   const [sidemenuisopened, setsidemenuisopened] = useState(false);
@@ -34,7 +34,7 @@ export default function Header() {
           <a href="/" className="shiping-address-container">
             <p className="shipping-address-send-to">Send to Elizeu</p>
             <p className="shipping-address">
-              <FontAwesomeIcon icon={faMapMarkerAlt} />
+              {fonticon(faMapMarkerAlt)}
               <span> 2845-093‌</span>
             </p>
           </a>
@@ -47,14 +47,14 @@ export default function Header() {
         <div id="header-right" className="header-column">
           <a href="/" className="language-selector">
             <UsaFlag width={24} />
-            <FontAwesomeIcon className="icondown" icon={faCaretDown} />
+            {fonticon(faCaretDown, "icondown")}
           </a>
 
           <a href="/" className="header-colum myaccount-hello-message">
             <span className="hellomessage">Hello, Elizeu</span>
             <span className="account-link">
               <span>Account & Lists</span>
-              <FontAwesomeIcon className="icondown" icon={faCaretDown} />
+              {fonticon(faCaretDown, "icondown")}
             </span>
           </a>
 
@@ -80,7 +80,7 @@ export default function Header() {
       <div id="header-navbar">
         <div className="nav-left">
           <a href="/" className="hamburger-menu" onClick={onOpenSideMenu}>
-            <FontAwesomeIcon className="iconbars" icon={faBars} />
+            {fonticon(faBars, "iconbars")}
             <span>All</span>
           </a>
 
@@ -94,7 +94,7 @@ export default function Header() {
 
           <a href="/">
             <span>Browsing History</span>
-            <FontAwesomeIcon className="icondown" icon={faCaretDown} />
+            {fonticon(faCaretDown, "icondown")}
           </a>
 
           <a href="/">
