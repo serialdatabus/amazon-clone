@@ -3,7 +3,7 @@ import "../../styles/Header.css";
 import amazonlogo from "../../assets/amazonlogo.png";
 import SearchBar from "./SearchBar";
 import { ReactComponent as UsaFlag } from "../../assets/usaicon.svg";
-import { useDispatch, useSelector } from "react-redux";
+import { useDispatch, /*useSelector*/ } from "react-redux";
 import {
   showTransparentBg,
   hideTransparentBg,
@@ -14,14 +14,14 @@ import {
   faCaretDown,
   faBars,
   faShoppingBasket,
-  faMailBulk,
+  //faMailBulk,
 } from "@fortawesome/free-solid-svg-icons";
 import SideMenu from "../SideMenu/SideMenu";
 import { fonticon } from "../../helpers/helpers";
 
 export default function Header() {
   const [sidemenuisopened, setsidemenuisopened] = useState(false);
-  const appstate = useSelector((state) => state.app);
+  //const appstate = useSelector((state) => state.app);
   const dispatch = useDispatch();
 
   const onOpenSideMenu = (e) => {
@@ -63,7 +63,7 @@ export default function Header() {
           <SearchBar />
         </div>
 
-        <div id="header-right" onMou className="header-column">
+        <div id="header-right" className="header-column">
           <a
             {...languageSelectMouseEvents()}
             href="/"

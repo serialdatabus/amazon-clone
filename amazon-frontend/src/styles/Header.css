@@ -175,12 +175,7 @@
 #header-container .header-column > a.myaccount-hello-message .account-link {
 }
 
-#header-container
-  .header-column
-  > a.myaccount-hello-message
-  .account-link
-  > span {
-}
+
 
 #header-container
   .header-column
@@ -279,7 +274,7 @@
 }
 
 #amazoncart .left-cart .total-items {
-  color: orange;
+  color: orange; 
   margin-left: 4px;
   transform: translateY(-8px);
   display: block;
