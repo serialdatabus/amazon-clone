@@ -20,11 +20,11 @@ export const resetSideMenuState = ({
   setshowallcategories(false);
 };
 
-export const navigateToCategoryPage = (localstate) => {
-  const { onCloseSideMenu } = localstate;
+export const navigateToCategoryPage = (controllersParams) => {
+  const { onCloseSideMenu } = controllersParams;
 
   onCloseSideMenu();
-  resetSideMenuState(localstate);
+  resetSideMenuState(controllersParams);
 };
 
 export const openSubCategories = ({
@@ -35,17 +35,21 @@ export const openSubCategories = ({
   setcurrentSelectedCategory(slug);
   setsubcategoriesisopened(true);
 };
-/*
-  export const gobackToMainMenu = (e) => {
-    e.preventDefault();
-    setsubcategoriesisopened(false);
-  };
-*/
 
 export const gobackToMainMenu = ({ e, setsubcategoriesisopened }) => {
   e.preventDefault();
   setsubcategoriesisopened(false);
 };
+
+export const loadSideMenuCategories = ({
+  setfirstfourcategories,
+  setremaincategories,
+}) => {
+  setfirstfourcategories(getMainCategories().slice(0, 4));
+  setremaincategories(getMainCategories().slice(4));
+};
+
+// beginning render functions
 
 export const renderCategories = ({
   categories_to_render,
@@ -62,7 +66,7 @@ export const renderCategories = ({
 
     {categories_to_render.map((item) => {
       const subcategories = getSubCategories(item.slug);
-      const total_sub_cats_found = subcategories.length;
+      const hasSubCategory = subcategories.length > 0;
 
       return (
         <li key={item.slug}>
@@ -70,7 +74,7 @@ export const renderCategories = ({
             onClick={(e) => {
               e.preventDefault();
 
-              if (total_sub_cats_found === 0) {
+              if (hasSubCategory) {
                 navigateToCategoryPage(controllersParams);
               } else {
                 openSubCategories({ slug: item.slug, ...controllersParams });
@@ -80,8 +84,7 @@ export const renderCategories = ({
           >
             <span>{item.displayname}</span>
 
-            {total_sub_cats_found > 0 &&
-              fonticon(faChevronRight, "icon-open-submenu")}
+            {hasSubCategory && fonticon(faChevronRight, "icon-open-submenu")}
           </a>
         </li>
       );
@@ -178,10 +181,4 @@ export const renderSettings = () => {
   );
 };
 
-export const loadSideMenuCategories = ({
-  setfirstfourcategories,
-  setremaincategories,
-}) => {
-  setfirstfourcategories(getMainCategories().slice(0, 4));
-  setremaincategories(getMainCategories().slice(4));
-};
+// end render functions
