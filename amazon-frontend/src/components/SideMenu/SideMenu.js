@@ -21,6 +21,7 @@ export default function SideMenu({ opened, onCloseSideMenu }) {
   const [remaincategories, setremaincategories] = useState([]);
   const [showallcategories, setshowallcategories] = useState(false);
   const [subcategoriesisopened, setsubcategoriesisopened] = useState(false);
+  const [currentSelectedCategory, setcurrentSelectedCategory] = useState("");
 
   useEffect(() => {
     setfirstfourcategories(getMainCategories().slice(0, 4));
@@ -29,14 +30,26 @@ export default function SideMenu({ opened, onCloseSideMenu }) {
     return () => {};
   }, []);
 
-  const navigateToCategoryPage = (e) => {
-    e.preventDefault();
-    onCloseSideMenu();
+  useEffect(() => {
+    if (opened) {
+      console.log("reseting to the initial state");
+    }
+
+    return () => {};
+  }, [opened]);
+
+  const resetSideMenuState = () => {
+    setshowallcategories(false);
+    setsubcategoriesisopened(false);
   };
 
-  const openSubCategories = (e) => {
-    e.preventDefault();
+  const navigateToCategoryPage = (e) => {
+    onCloseSideMenu();
+    resetSideMenuState();
+  };
 
+  const openSubCategories = (categoryslug) => {
+    setcurrentSelectedCategory(categoryslug);
     setsubcategoriesisopened(true);
   };
 
@@ -69,20 +82,25 @@ export default function SideMenu({ opened, onCloseSideMenu }) {
 
       {categories_to_render.map((item) => {
         const subcategories = getSubCategories(item.slug);
+        const total_sub_cats_found = subcategories.length;
 
         return (
           <li key={item.slug}>
             <a
-              onClick={
-                subcategories.length == 0
-                  ? navigateToCategoryPage
-                  : openSubCategories
-              }
+              onClick={(e) => {
+                e.preventDefault();
+
+                if (total_sub_cats_found === 0) {
+                  navigateToCategoryPage();
+                } else {
+                  openSubCategories(item.slug);
+                }
+              }}
               href="/"
             >
               <span>{item.displayname}</span>
 
-              {subcategories.length > 0 &&
+              {total_sub_cats_found > 0 &&
                 fonticon(faChevronRight, "icon-open-submenu")}
             </a>
           </li>
@@ -131,8 +149,8 @@ export default function SideMenu({ opened, onCloseSideMenu }) {
 
         <li className="list-divisor"></li>
         {renderCategories(
-          getSubCategories("software"),
-          getCategoryBySlug("software").displayname
+          getSubCategories(currentSelectedCategory),
+          getCategoryBySlug(currentSelectedCategory).displayname
         )}
       </ul>
     );
