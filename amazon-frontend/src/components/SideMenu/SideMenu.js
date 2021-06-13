@@ -30,14 +30,6 @@ export default function SideMenu({ opened, onCloseSideMenu }) {
     return () => {};
   }, []);
 
-  useEffect(() => {
-    if (opened) {
-      console.log("reseting to the initial state");
-    }
-
-    return () => {};
-  }, [opened]);
-
   const resetSideMenuState = () => {
     setshowallcategories(false);
     setsubcategoriesisopened(false);
