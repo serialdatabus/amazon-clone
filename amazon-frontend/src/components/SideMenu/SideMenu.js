@@ -33,6 +33,7 @@ export default function SideMenu({ opened, onCloseSideMenu }) {
   const resetSideMenuState = () => {
     setshowallcategories(false);
     setsubcategoriesisopened(false);
+    setshowallcategories(false);
   };
 
   const navigateToCategoryPage = (e) => {
@@ -42,7 +43,7 @@ export default function SideMenu({ opened, onCloseSideMenu }) {
 
   const openSubCategories = (categoryslug) => {
     setcurrentSelectedCategory(categoryslug);
-    setsubcategoriesisopened(true);
+    setsubcategoriesisopened(true); 
   };
 
   const gobackToMainMenu = (e) => {
@@ -54,7 +55,7 @@ export default function SideMenu({ opened, onCloseSideMenu }) {
 
   const renderTransparentBackground = () => (
     <div
-      onClick={onCloseSideMenu}
+      onClick={() => {onCloseSideMenu(); resetSideMenuState(); }}
       id="sidemenu-bg-transparent"
       className={opened ? " opened" : ""}
     ></div>

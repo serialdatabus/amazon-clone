@@ -22,7 +22,7 @@ export default function SearchBar() {
     <div id="header-searchbar">
       <div className="search-category-selector" onChange={onChangeCategory}>
         <span className="label">{currentcategory.displayname}</span>
-        {fonticon(faCaretDown,"iconbdown")}
+        {fonticon(faCaretDown,"icondown")}
         <select className="categories_list">
           {categorieslist.map((item, index) => {
             return (

@@ -136,14 +136,17 @@
   color: #272626;
 }
 
-#header-searchbar .search-category-selector span {
-}
+
 
 #header-searchbar .search-category-selector .icondown {
   font-size: 0.8em;
   color: #666666;
   margin-left: 5px;
 }
+
+
+
+
 
 #header-searchbar .search-category-selector:hover .icondown {
   color: #383636;
