@@ -1,9 +1,18 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import "../../styles/FloatingLanguageSelector.css";
 import { renderLanguages } from "./controllers";
 
 export const FloatingLanguageSelector = ({ isvisible }) => {
-  // const [isvisible, setisvisible] = useState(true);
+  const [selectedvalue, setselectedvalue] = useState("en");
+
+  const onSelectedLanguage = ({e , code_language}) => {
+
+    e.preventDefault();
+           
+    setselectedvalue(code_language);
+
+
+  }
 
   useEffect(() => {
     return () => {};
@@ -20,7 +29,7 @@ export const FloatingLanguageSelector = ({ isvisible }) => {
         <a href="/">Learn more</a>
       </div>
 
-      {renderLanguages()}
+      {renderLanguages({code_language: selectedvalue,onSelectedLanguage})}
     </div>
   );
 };
