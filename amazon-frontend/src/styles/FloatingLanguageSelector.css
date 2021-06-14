@@ -1,39 +1,26 @@
 #floating-language-selector {
-    position: absolute;
+  position: absolute;
 
-    background-color: white;
-    width: 15em;
-    border: 1px solid #bbb;
-    box-shadow: 0 2px 4px 0 rgb(0 0 0 / 13%);
-    padding: 0.5em;
-    border-radius: 3px;
-    z-index: 100;
-    opacity: 0;
-    pointer-events: none;
- 
-  
+  background-color: white;
+  width: 15em;
+  border: 1px solid #bbb;
+  box-shadow: 0 2px 4px 0 rgb(0 0 0 / 13%);
+  padding: 0.5em;
+  border-radius: 3px;
+  z-index: 100;
+  opacity: 0;
+  pointer-events: none;
 }
 
-.language-selector:hover #floating-language-selector
-{
-
-    opacity: 1;
-    pointer-events: all;
-
+.language-selector:hover #floating-language-selector {
+  opacity: 1;
+  pointer-events: all;
 }
-
-
 
 #floating-language-selector::after {
-  
-
-
 }
 
-
-#floating-language-selector.visible
-{
-   
+#floating-language-selector.visible {
 }
 
 #floating-language-selector .title-change-language {
@@ -57,8 +44,6 @@
   align-items: center;
   margin-top: 0.6em;
   cursor: pointer;
-
-
 }
 
 #floating-language-selector .language-option .radiobtn {
@@ -81,16 +66,9 @@
   border-radius: 100%;
 }
 
-
 #floating-language-selector .language-option:hover .radiobtn::after {
-  
-    background-color: #efa462;
-
-  }
-  
-  
-
-
+  background-color: #efa462;
+}
 
 #floating-language-selector .language-option .language-label {
   margin-left: 5px;
@@ -99,12 +77,7 @@
   text-decoration: none;
 }
 
-
-#floating-language-selector .language-option:hover .language-label{
-
-    
-    text-decoration: underline;
-    color: #efa462;
-
-  }
-  
+#floating-language-selector .language-option:hover .language-label {
+  text-decoration: underline;
+  color: #efa462;
+}

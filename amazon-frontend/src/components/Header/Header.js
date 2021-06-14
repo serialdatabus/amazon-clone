@@ -21,7 +21,6 @@ import { fonticon } from "../../helpers/helpers";
 import { languageSelectMouseEvents } from "./controllers";
 import { FloatingLanguageSelector } from "../FloatingLanguageSelector/FloatingLanguageSelector";
 
-
 export default function Header() {
   const [sidemenuisopened, setsidemenuisopened] = useState(false);
   //const appstate = useSelector((state) => state.app);
@@ -71,7 +70,10 @@ export default function Header() {
             {<FloatingLanguageSelector isvisible={true} />}
           </a>
 
-          <a href="/" className="header-colum myaccount-hello-message hasfloatmenu">
+          <a
+            href="/"
+            className="header-colum myaccount-hello-message hasfloatmenu"
+          >
             <span className="hellomessage">Hello, Elizeu</span>
             <span className="account-link">
               <span>Account & Lists</span>

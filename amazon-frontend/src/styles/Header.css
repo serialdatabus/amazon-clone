@@ -44,7 +44,6 @@
   margin: 0 10px;
   text-decoration: none;
   position: relative;
-
 }
 
 #header-container .header-column > a:hover {
@@ -154,36 +153,18 @@
 }
 
 #header-container .header-column > a.language-selector {
-
-
   display: inline-flex;
   flex-direction: row;
   align-items: flex-end;
-
-
 }
 
-
-
-#header-container .header-column > a.language-selector::after
-{
-
- 
-
-
+#header-container .header-column > a.language-selector::after {
 }
 
-
-#header-container .header-column > a.hasfloatmenu
-{
-
-
+#header-container .header-column > a.hasfloatmenu {
 }
 
-
-#header-container .header-column > a.hasfloatmenu::after
-{
-
+#header-container .header-column > a.hasfloatmenu::after {
   content: "";
   display: block;
   position: absolute;
@@ -196,44 +177,24 @@
   border-right: 1px solid rgba(187, 187, 187, 0);
   border-bottom: 1px solid rgba(187, 187, 187, 0);
   z-index: 100;
-  transform: rotate( 
-45deg
-);
-display: none;
-
+  transform: rotate(45deg);
+  display: none;
 }
 
-
-
-#header-container .header-column > a.hasfloatmenu:hover::after
-{
-
-
-display: block;;
-
-
+#header-container .header-column > a.hasfloatmenu:hover::after {
+  display: block;
 }
 
-
-
-
-#header-container .header-column > a.language-selector:hover::after
-{
-
- display: block;
-
+#header-container .header-column > a.language-selector:hover::after {
+  display: block;
 }
 
-
-
-#header-container .header-column > a.language-selector:hover  #floating-language-selector
-{
-
-display: block;
-
+#header-container
+  .header-column
+  > a.language-selector:hover
+  #floating-language-selector {
+  display: block;
 }
-
-
 
 #header-container .header-column > a.language-selector .icondown {
   margin-left: 5px;
@@ -252,8 +213,6 @@ display: block;
 
 #header-container .header-column > a.myaccount-hello-message .account-link {
 }
-
-
 
 #header-container
   .header-column
@@ -353,7 +312,7 @@ display: block;
 }
 
 #amazoncart .left-cart .total-items {
-  color: orange; 
+  color: orange;
   margin-left: 4px;
   transform: translateY(-8px);
   display: block;
