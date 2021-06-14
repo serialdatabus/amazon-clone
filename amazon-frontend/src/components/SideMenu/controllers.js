@@ -74,7 +74,7 @@ export const renderCategories = ({
             onClick={(e) => {
               e.preventDefault();
 
-              if (hasSubCategory) {
+              if (!hasSubCategory) {
                 navigateToCategoryPage(controllersParams);
               } else {
                 openSubCategories({ slug: item.slug, ...controllersParams });

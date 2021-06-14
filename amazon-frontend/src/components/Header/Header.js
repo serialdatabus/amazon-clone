@@ -19,6 +19,8 @@ import {
 import SideMenu from "../SideMenu/SideMenu";
 import { fonticon } from "../../helpers/helpers";
 import { languageSelectMouseEvents } from "./controllers";
+import { FloatingLanguageSelector } from "../FloatingLanguageSelector/FloatingLanguageSelector";
+
 
 export default function Header() {
   const [sidemenuisopened, setsidemenuisopened] = useState(false);
@@ -62,13 +64,14 @@ export default function Header() {
               showTransparentBg,
             })}
             href="/"
-            className="language-selector"
+            className="language-selector hasfloatmenu"
           >
             <UsaFlag width={24} />
             {fonticon(faCaretDown, "icondown")}
+            {<FloatingLanguageSelector isvisible={true} />}
           </a>
 
-          <a href="/" className="header-colum myaccount-hello-message">
+          <a href="/" className="header-colum myaccount-hello-message hasfloatmenu">
             <span className="hellomessage">Hello, Elizeu</span>
             <span className="account-link">
               <span>Account & Lists</span>
