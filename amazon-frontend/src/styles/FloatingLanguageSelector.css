@@ -78,7 +78,7 @@
   font-size: 0.85em;
   text-decoration: none;
   pointer-events: none;
-
+  width: 100%;
 }
 
 #floating-language-selector .language-option:hover .language-label,
