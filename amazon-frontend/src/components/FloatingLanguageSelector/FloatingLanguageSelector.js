@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 import "../../styles/FloatingLanguageSelector.css";
-import { renderLanguages } from "./controller";
+import { renderLanguages } from "./controllers";
 
 export const FloatingLanguageSelector = ({ isvisible }) => {
   // const [isvisible, setisvisible] = useState(true);
