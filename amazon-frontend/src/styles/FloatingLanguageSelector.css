@@ -57,6 +57,8 @@
   align-items: center;
   margin-top: 0.6em;
   cursor: pointer;
+
+
 }
 
 #floating-language-selector .language-option .radiobtn {
@@ -75,12 +77,34 @@
   display: block;
   width: 6px;
   height: 6px;
-  background-color: #efa462;
+  background-color: #ffffff;
   border-radius: 100%;
 }
+
+
+#floating-language-selector .language-option:hover .radiobtn::after {
+  
+    background-color: #efa462;
+
+  }
+  
+  
+
+
 
 #floating-language-selector .language-option .language-label {
   margin-left: 5px;
   color: #444;
   font-size: 0.85em;
+  text-decoration: none;
 }
+
+
+#floating-language-selector .language-option:hover .language-label{
+
+    
+    text-decoration: underline;
+    color: #efa462;
+
+  }
+  
