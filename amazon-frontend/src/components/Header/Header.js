@@ -108,32 +108,8 @@ export default function Header() {
           </a>
 
           <a href="/">
-            <span>Today's Deals</span>
-          </a>
-
-          <a href="/">
-            <span>Buy Again</span>
-          </a>
-
-          <a href="/">
             <span>Browsing History</span>
             {fonticon(faCaretDown, "icondown")}
-          </a>
-
-          <a href="/">
-            <span>Customer Service</span>
-          </a>
-
-          <a href="/">
-            <span>Registry</span>
-          </a>
-
-          <a href="/">
-            <span>Gift Cards</span>
-          </a>
-
-          <a href="/">
-            <span>Sell</span>
           </a>
         </div>
 
