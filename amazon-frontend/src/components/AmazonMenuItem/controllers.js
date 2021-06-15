@@ -1,18 +1,17 @@
 export const handleMouseEnter = (controllerParams) => {
-const { setshowFloatMenu , onHover ,defaultMenuItem } = controllerParams;
+  const { setshowFloatMenu, onHover, defaultMenuItem } = controllerParams;
 
- if (defaultMenuItem) return;
+  if (defaultMenuItem) return;
 
-    setshowFloatMenu(true);
-    onHover();
-  };
+  setshowFloatMenu(true);
+  onHover();
+};
 
 export const handleMouseleave = (controllerParams) => {
-const { setshowFloatMenu , onLeave , defaultMenuItem } = controllerParams;
+  const { setshowFloatMenu, onLeave, defaultMenuItem } = controllerParams;
 
-if (defaultMenuItem) return;
+  if (defaultMenuItem) return;
 
-
-    setshowFloatMenu(false);
-    onLeave();
-  };
+  setshowFloatMenu(false);
+  onLeave();
+};

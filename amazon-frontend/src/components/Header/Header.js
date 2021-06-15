@@ -41,9 +41,15 @@ export default function Header() {
     <div>
       <div id="header-container">
         <div id="header-left" className="header-column">
-          <a href="/">
-            <img alt="" src={amazonlogo} />
-          </a>
+          <AmazonMenuItem
+            className="shiping-address-container"
+            default
+            labelcomponent={
+              <>
+                <img alt="" src={amazonlogo} />
+              </>
+            }
+          />
 
           <AmazonMenuItem
             className="shiping-address-container"
@@ -57,8 +63,6 @@ export default function Header() {
                 </p>
               </>
             }
-            onHover={() => dispatch(showTransparentBg())}
-            onLeave={() => dispatch(hideTransparentBg())}
           />
         </div>
 
@@ -67,7 +71,7 @@ export default function Header() {
         </div>
 
         <div id="header-right" className="header-column">
-           <AmazonMenuItem
+          <AmazonMenuItem
             labelcomponent={getFlagComponent(selectedLanguage, 24)}
             onHover={() => dispatch(showTransparentBg())}
             onLeave={() => dispatch(hideTransparentBg())}
@@ -106,19 +110,21 @@ export default function Header() {
                 </span>
               </>
             }
-            onHover={() => dispatch(showTransparentBg())}
-            onLeave={() => dispatch(hideTransparentBg())}
           />
 
-          <a href="/">
-            <div id="amazoncart" className="header-colum">
-              <div className="left-cart">
-                <span className="total-items">8</span>
-              </div>
+          <AmazonMenuItem
+            default
+            className="header-colum myaccount-hello-message"
+            labelcomponent={
+              <div id="amazoncart" className="header-colum">
+                <div className="left-cart">
+                  <span className="total-items">8</span>
+                </div>
 
-              <div className="right-cart"></div>
-            </div>
-          </a>
+                <div className="right-cart"></div>
+              </div>
+            }
+          />
         </div>
       </div>
 
