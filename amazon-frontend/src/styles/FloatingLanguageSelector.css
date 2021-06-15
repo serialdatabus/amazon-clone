@@ -1,6 +1,4 @@
 .floating-language-selector {
- 
-
   background-color: white;
   width: 15em;
   /*
@@ -11,7 +9,6 @@
   border-radius: 3px;
   z-index: 100;
   opacity: 1;
-
 }
 
 .language-selector:hover .floating-language-selector {
@@ -68,7 +65,6 @@
   border-radius: 100%;
 }
 
-
 .floating-language-selector .language-option:hover .radiobtn::after,
 .floating-language-selector .language-option.selected .radiobtn::after {
   background-color: #efa462;
@@ -80,7 +76,6 @@
   font-size: 0.85em;
   text-decoration: none;
   pointer-events: none;
-
 }
 
 .floating-language-selector .language-option:hover .language-label,
@@ -88,5 +83,4 @@
   text-decoration: underline;
   color: #efa462;
   pointer-events: none;
-
 }

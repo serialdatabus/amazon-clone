@@ -45,27 +45,21 @@ export default function Header() {
             <img alt="" src={amazonlogo} />
           </a>
 
-         
-
-
           <AmazonMenuItem
-          className="shiping-address-container"
+            className="shiping-address-container"
             default
-            labelcomponent={<>
-            <p className="shipping-address-send-to">Send to Elizeu</p>
-            <p className="shipping-address">
-              {fonticon(faMapMarkerAlt)}
-              <span> 2845-093‌</span>
-            </p>
-            </>}
-            
+            labelcomponent={
+              <>
+                <p className="shipping-address-send-to">Send to Elizeu</p>
+                <p className="shipping-address">
+                  {fonticon(faMapMarkerAlt)}
+                  <span> 2845-093‌</span>
+                </p>
+              </>
+            }
             onHover={() => dispatch(showTransparentBg())}
             onLeave={() => dispatch(hideTransparentBg())}
           />
-
-
-
-
         </div>
 
         <div id="header-center" className="header-column">
@@ -74,8 +68,7 @@ export default function Header() {
 
         <div id="header-right" className="header-column">
           <AmazonMenuItem
-        
-            labelcomponent={getFlagComponent(selectedLanguage, 24)}        
+            labelcomponent={getFlagComponent(selectedLanguage, 24)}
             onHover={() => dispatch(showTransparentBg())}
             onLeave={() => dispatch(hideTransparentBg())}
           >
@@ -88,46 +81,34 @@ export default function Header() {
             }
           </AmazonMenuItem>
 
-
-
-
-
-
           <AmazonMenuItem
-          className="header-colum myaccount-hello-message"
-            labelcomponent={<>
-            <span className="hellomessage">Hello, Elizeu</span>
-            <span className="account-link">
-              <span>Account & Lists</span>
-             
-            </span>
-            </>}
-            
+            className="header-colum myaccount-hello-message"
+            labelcomponent={
+              <>
+                <span className="hellomessage">Hello, Elizeu</span>
+                <span className="account-link">
+                  <span>Account & Lists</span>
+                </span>
+              </>
+            }
             onHover={() => dispatch(showTransparentBg())}
             onLeave={() => dispatch(hideTransparentBg())}
           />
 
-          
-
-
-
-
           <AmazonMenuItem
-          default
-          className="header-colum myaccount-hello-message"
-            labelcomponent={<>
-             <span className="hellomessage">Returns</span>
-            <span className="account-link">
-              <span>& Orders</span>
-            </span>
-            </>}
-            
+            default
+            className="header-colum myaccount-hello-message"
+            labelcomponent={
+              <>
+                <span className="hellomessage">Returns</span>
+                <span className="account-link">
+                  <span>& Orders</span>
+                </span>
+              </>
+            }
             onHover={() => dispatch(showTransparentBg())}
             onLeave={() => dispatch(hideTransparentBg())}
           />
-
-
-
 
           <a href="/">
             <div id="amazoncart" className="header-colum">

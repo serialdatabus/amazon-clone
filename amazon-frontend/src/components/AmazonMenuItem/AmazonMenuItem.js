@@ -1,4 +1,4 @@
-import React, {  useEffect, useLayoutEffect, useState } from "react";
+import React, { useEffect, useLayoutEffect, useState } from "react";
 import "../../styles/AmazonMenuItem.css";
 
 export default function AamzonMenuItem(props) {
@@ -22,45 +22,26 @@ export default function AamzonMenuItem(props) {
   };
 
   const handleMousEnter = () => {
-
-    if(defaultMenuItem)
-    return;
-
+    if (defaultMenuItem) return;
 
     setshowFloatMenu(true);
     onHover();
   };
 
   const handleMouseleave = () => {
-
-    if(defaultMenuItem)
-    return;
-
+    if (defaultMenuItem) return;
 
     setshowFloatMenu(false);
     onLeave();
   };
 
-
   useEffect(() => {
-      
-    
-        if(props.default)
-        {
+    if (props.default) {
+      setdefaultMenuItem(true);
+    }
 
-            setdefaultMenuItem(true);
-
-        }
-
-
-
-      return () => {
-         
-    
-      }
+    return () => {};
   }, [props.default]);
-
-
 
   useLayoutEffect(() => {
     setshowFloatMenu(isVisible);
@@ -73,7 +54,13 @@ export default function AamzonMenuItem(props) {
 
   return (
     <div
-      className={"amazon-menu-item" + (showFloatMenu ? " showfloatmenu" : "")+ (defaultMenuItem ? " defaultmenuitem" : "")+" "+className}
+      className={
+        "amazon-menu-item" +
+        (showFloatMenu ? " showfloatmenu" : "") +
+        (defaultMenuItem ? " defaultmenuitem" : "") +
+        " " +
+        className
+      }
       onMouseEnter={handleMousEnter}
       onMouseLeave={handleMouseleave}
     >
