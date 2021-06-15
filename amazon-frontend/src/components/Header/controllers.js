@@ -22,11 +22,8 @@ export const getFlagComponent = (country_code, size) => {
   const flags = {
     en: <UsaFlag width={size} />,
     es: <SpainFlag width={size} />,
-
     de: <GermanyFlag width={size} />,
-
     pt: <PortugalFlag width={size} />,
-
     ko: <SouthKoreaFlag width={size} />,
   };
 
