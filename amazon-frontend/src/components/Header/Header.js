@@ -10,9 +10,6 @@ import {
 
 import {
   faMapMarkerAlt,
-  faCaretDown,
-  faBars,
-  faShoppingBasket,
   //faMailBulk,
 } from "@fortawesome/free-solid-svg-icons";
 import SideMenu from "../SideMenu/SideMenu";
