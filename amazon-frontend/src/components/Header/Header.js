@@ -67,7 +67,7 @@ export default function Header() {
         </div>
 
         <div id="header-right" className="header-column">
-          <AmazonMenuItem
+           <AmazonMenuItem
             labelcomponent={getFlagComponent(selectedLanguage, 24)}
             onHover={() => dispatch(showTransparentBg())}
             onLeave={() => dispatch(hideTransparentBg())}

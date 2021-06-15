@@ -1,4 +1,4 @@
-export const handleMousEnter = (controllerParams) => {
+export const handleMouseEnter = (controllerParams) => {
 const { setshowFloatMenu , onHover ,defaultMenuItem } = controllerParams;
 
  if (defaultMenuItem) return;

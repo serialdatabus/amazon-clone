@@ -1,6 +1,6 @@
 import React, { useEffect, useLayoutEffect, useState } from "react";
 import "../../styles/AmazonMenuItem.css";
-import { handleMousEnter, handleMouseleave } from "./controllers";
+import { handleMouseEnter, handleMouseleave } from "./controllers";
 
 export default function AamzonMenuItem(props) {
   const { children, className, labelcomponent, onHover, onLeave, isVisible } =
@@ -55,7 +55,7 @@ export default function AamzonMenuItem(props) {
         " " +
         className
       }
-      onMouseEnter={() => handleMousEnter(controllerParams)}
+      onMouseEnter={() => handleMouseEnter(controllerParams)}
       onMouseLeave={() => handleMouseleave(controllerParams)}
     >
       <div className="container1">
