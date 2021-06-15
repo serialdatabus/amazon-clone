@@ -1,44 +1,46 @@
-#floating-language-selector {
-  position: absolute;
+.floating-language-selector {
+ 
 
   background-color: white;
   width: 15em;
+  /*
   border: 1px solid #bbb;
   box-shadow: 0 2px 4px 0 rgb(0 0 0 / 13%);
+  */
   padding: 0.5em;
   border-radius: 3px;
   z-index: 100;
-  opacity: 0;
-  pointer-events: none;
+  opacity: 1;
+
 }
 
-.language-selector:hover #floating-language-selector {
+.language-selector:hover .floating-language-selector {
   opacity: 1;
   pointer-events: all;
 }
 
-#floating-language-selector::after {
+.floating-language-selector::after {
 }
 
-#floating-language-selector.visible {
+.floating-language-selector.visible {
 }
 
-#floating-language-selector .title-change-language {
+.floating-language-selector .title-change-language {
 }
 
-#floating-language-selector .title-change-language span {
+.floating-language-selector .title-change-language span {
   color: #444;
   font-size: 0.87em;
 }
 
-#floating-language-selector .title-change-language a {
+.floating-language-selector .title-change-language a {
   color: #3c6b76;
   text-decoration: none;
   font-size: 0.8em;
   margin-left: 10px;
 }
 
-#floating-language-selector .language-option {
+.floating-language-selector .language-option {
   display: flex;
   justify-content: flex-start;
   align-items: center;
@@ -46,7 +48,7 @@
   cursor: pointer;
 }
 
-#floating-language-selector .language-option .radiobtn {
+.floating-language-selector .language-option .radiobtn {
   width: 16px;
   height: 16px;
   border: 1px solid #878787;
@@ -57,7 +59,7 @@
   justify-content: center;
 }
 
-#floating-language-selector .language-option .radiobtn::after {
+.floating-language-selector .language-option .radiobtn::after {
   content: "";
   display: block;
   width: 6px;
@@ -66,23 +68,25 @@
   border-radius: 100%;
 }
 
-#floating-language-selector .language-option:hover .radiobtn::after,
-#floating-language-selector .language-option.selected .radiobtn::after {
+
+.floating-language-selector .language-option:hover .radiobtn::after,
+.floating-language-selector .language-option.selected .radiobtn::after {
   background-color: #efa462;
 }
 
-#floating-language-selector .language-option .language-label {
+.floating-language-selector .language-option .language-label {
   margin-left: 5px;
   color: #444;
   font-size: 0.85em;
   text-decoration: none;
   pointer-events: none;
-  width: 100%;
+
 }
 
-#floating-language-selector .language-option:hover .language-label,
-#floating-language-selector .language-option.selected .language-label {
+.floating-language-selector .language-option:hover .language-label,
+.floating-language-selector .language-option.selected .language-label {
   text-decoration: underline;
   color: #efa462;
   pointer-events: none;
+
 }

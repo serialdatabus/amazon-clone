@@ -1,10 +1,54 @@
-import React from "react";
+import React, { useState } from "react";
 import "../../styles/AmazonMenuItem.css";
 
-export default function AamzonMenuItem({ children, labelcomponent }) {
+export default function AamzonMenuItem({
+  children,
+  labelcomponent,
+  onHover,
+  onLeave,
+  isVisible
+}) {
+
+
+    const [showFloatMenu, setshowFloatMenu] = useState(isVisible);
+
+
+  const getWidth = () =>
+    window.innerWidth ||
+    document.documentElement.clientWidth ||
+    document.body.clientWidth;
+
+  let timeoutId = null;
+  const resizeListener = () => {
+  
+
+
+    clearTimeout(timeoutId);
+
+
+    console.log(getWidth());
+  };
+
+  const handleMousEnter = () => {
+    setshowFloatMenu(true);
+    onHover();
+  };
+
+  const handleMouseleave = () => {
+    setshowFloatMenu(false);
+    onLeave();
+  };
+
+  // set resize listener
+  window.addEventListener("resize", resizeListener);
+
   return (
-    <div className="amazon-menu-item">
-      <div class="container1">
+    <div
+      className={"amazon-menu-item"+(showFloatMenu ? " showfloatmenu":"")}
+      onMouseEnter={handleMousEnter}
+      onMouseLeave={handleMouseleave}
+    >
+      <div className="container1">
         <div className="button-content">{labelcomponent}</div>
 
         <div className="arrows">

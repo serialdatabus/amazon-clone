@@ -1,175 +1,113 @@
-.amazon-menu-item
-{
-
-    display: inline-flex;
-    cursor: pointer;
-    flex-direction: column;
-    border: 1px solid rgba(255, 255, 255, 0);
-    height: 100%;
-    position: relative;
-    justify-content: flex-end;
+.amazon-menu-item {
+  display: inline-flex;
+  cursor: pointer;
+  flex-direction: column;
+  border: 1px solid rgba(255, 255, 255, 0);
+  height: 100%;
+  position: relative;
+  justify-content: flex-end;
 }
 
-
-.amazon-menu-item .container1
-{
-
-    padding-left: 8px;
-
+.amazon-menu-item .container1 {
+  padding-left: 8px;
 }
 
-
-.amazon-menu-item .container2
-{
-
-    display: flex;
-    justify-content: flex-end;
-    position: relative;
-    margin-top: -2px;
-
+.amazon-menu-item .container2 {
+  display: flex;
+  justify-content: flex-end;
+  position: relative;
+  margin-top: -3px;
 }
 
-
-.amazon-menu-item .container2 > span
-{
-
-    width: 20px;
-    height: 7px;
-    display: flex;
-    justify-content: center;
-
+.amazon-menu-item .container2 > span {
+  width: 20px;
+  height: 7px;
+  display: flex;
+  justify-content: center;
 }
 
-
-.amazon-menu-item:hover
-{
-
-border: 1px solid white;
-
+.amazon-menu-item:hover {
+  border: 1px solid white;
 }
 
- 
-
-.amazon-menu-item:hover .float-menu-container,
-.amazon-menu-item:hover .container2 .floatingmenu-arrow
-{
-
-display: inline-block;
-
+.amazon-menu-item.showfloatmenu .float-menu-container,
+.amazon-menu-item.showfloatmenu .container2 .floatingmenu-arrow {
+  display: inline-block;
 }
 
-
-
-
-
-
-
-.amazon-menu-item .button-content
-{
-
-    display: inline-flex;
-    padding-right: 5px;
-    flex-direction: column;
-
+.amazon-menu-item .button-content {
+  display: inline-flex;
+  padding-right: 5px;
+  flex-direction: column;
 }
 
-
-
-.amazon-menu-item .arrows
-{
-
-
-    display: inline-flex;
-
-    
+.amazon-menu-item .arrows {
+  display: inline-flex;
 }
 
-
-
-.amazon-menu-item .arrows
-{
-
-    display: inline-flex;
-    flex-direction: column;
-    justify-content: flex-end;
-    align-items: center;
-    position: relative;
-    overflow: hidden;
-    width: 20px;
-    transform: translateY(-3px);
-  
+.amazon-menu-item .arrows {
+  display: inline-flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+  width: 20px;
+  transform: translateY(-6px);
 }
-
 
 .amazon-menu-item .arrows .floatingmenu,
-.amazon-menu-item .arrows .dropwodwn
-{
-transform-origin: center;
-
+.amazon-menu-item .arrows .dropwodwn {
+  transform-origin: center;
 }
 
-
-
-
-.amazon-menu-item .arrows .dropwodwn
-{
-
-    width: 9px;
-    height: 5px;
-    background: grey;
-    clip-path: polygon(50% 100%, 0 0, 100% 0);
-    margin-right:6px;
-
+.amazon-menu-item .arrows .dropwodwn {
+  width: 9px;
+  height: 5px;
+  background: #a7acb2;
+  clip-path: polygon(50% 100%, 0 0, 100% 0);
+  margin-right: 6px;
 }
 
+.amazon-menu-item .container2 .floatingmenu-arrow {
+  width: 100%;
+  display: block;
+  height: 100%;
+  background: white;
+  -webkit-clip-path: polygon(0 98%, 50% 0, 100% 100%);
+  clip-path: polygon(0 98%, 50% 0, 100% 100%);
+  display: none;
+  margin-right: 6px;
 
-
-
-.amazon-menu-item .container2 .floatingmenu-arrow
-{
-
-
-    width: 14px;
-    display: block;
-    height: 100%;
-    background: white;
-    -webkit-clip-path: polygon(0 98%, 50% 0, 100% 100%);
-    clip-path: polygon(0 98%, 50% 0, 100% 100%);
-    display: none;
-    margin-right:6px;
-    
+  border: 1px solid #bbb;
+  box-shadow: 0 2px 4px 0 rgb(0 0 0 / 13%);
 }
 
+.amazon-menu-item .float-menu-container {
+  position: absolute;
+  background: white;
+  left: 0;
+  padding: 10px;
+  top: 6px;
+  border: 1px solid white;
+  border-radius: 3px;
+  /*display: none;*/
+  z-index: 20;
 
+  display: none;
 
+  border: 1px solid #bbb;
+  box-shadow: 0 2px 4px 0 rgb(0 0 0 / 13%);
 
-.amazon-menu-item .float-menu-container
-{
-
-    
-    position: absolute;
-    background: white;
-    left: 0;
-    padding: 10px;
-    top: 6px;
-    border: 1px solid white;
-    border-radius: 3px;
-    display: none;
-   
-
-
+  border-top: none;
 }
 
-#conteudo-ficticio
-{
-
-    width: 500px;
-    height: 500px;
-    background-color: yellow;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: black;
-
-
+#conteudo-ficticio {
+  width: 500px;
+  height: 500px;
+  background-color: yellow;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: black;
 }

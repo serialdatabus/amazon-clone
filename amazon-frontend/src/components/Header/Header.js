@@ -18,8 +18,8 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 import SideMenu from "../SideMenu/SideMenu";
 import { fonticon } from "../../helpers/helpers";
-import { languageSelectMouseEvents } from "./controllers";
 import { FloatingLanguageSelector } from "../FloatingLanguageSelector/FloatingLanguageSelector";
+import AmazonMenuItem from "../AmazonMenuItem/AmazonMenuItem";
 
 export default function Header() {
   const [sidemenuisopened, setsidemenuisopened] = useState(false);
@@ -56,7 +56,7 @@ export default function Header() {
         </div>
 
         <div id="header-right" className="header-column">
-          <a
+     {/*     <a
             {...languageSelectMouseEvents({
               dispatch,
               hideTransparentBg,
@@ -67,8 +67,16 @@ export default function Header() {
           >
             <UsaFlag width={24} />
             {fonticon(faCaretDown, "icondown")}
-            {<FloatingLanguageSelector isvisible={true} />}
+            {}
           </a>
+*/}
+
+
+          <AmazonMenuItem labelcomponent={ <UsaFlag width={24} />} onHover={()=>dispatch(showTransparentBg())} onLeave={()=>dispatch(hideTransparentBg())} >
+          {<FloatingLanguageSelector isvisible={true} />}
+          </AmazonMenuItem>
+
+
 
           <a
             href="/"
