@@ -146,7 +146,7 @@ export const renderSeeAllButton = ({
         setshowallcategories(!showallcategories);
       }}
     >
-      <span>See All</span>
+      <span>{ !showallcategories ? "See All" : "See Less"}</span>
       {!showallcategories && fonticon(faChevronDown, "icon-open-submenu")}
       {showallcategories && fonticon(faChevronUp, "icon-open-submenu")}
     </a>

@@ -12,3 +12,26 @@
 
 
 - no amazon item descobrir posicao actusalñ do elemento para evitarque toque as extremidades do ecra
+
+- criar componente de botao de navbar com o mesmo conceito que o botao amazonmenuitem - prioridade
+
+
+reaproveitar componente amazonmenuitem
+
+
+menu do topo superior direito vai ter apenas
+
+
+- meus pedidos
+
+- direcciones
+
+- inico sesao seguranca
+
+  - editar
+          nombre , password , telephone
+
+
+          formato lstagem produtos:
+
+          https://www.amazon.es/s?i=jewelry&rh=n%3A10440411031%2Cp_72%3A831280031&page=3&pf_rd_i=10440411031&pf_rd_p=43c1f5fe-7ad9-5a01-ae3f-3142d5e6a716&pf_rd_r=PZZA3RMABYGFGMCAJB1W&pf_rd_s=merchandised-search-10&pf_rd_t=BROWSE&qid=1623736591&ref=sr_pg_3

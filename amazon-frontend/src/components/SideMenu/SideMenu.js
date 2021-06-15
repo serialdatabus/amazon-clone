@@ -66,13 +66,13 @@ export default function SideMenu({ opened, onCloseSideMenu }) {
               {renderCategories({
                 categories_to_render: firstfourcategories,
                 section_title: "Shop By department",
-                customclas: "main",
+                customclass: "main",
                 controllersParams,
               })}
               {renderCategories({
                 categories_to_render: remaincategories,
                 section_title: "",
-                customclas:
+                customclass:
                   "remain-categories-list main" +
                   (showallcategories ? " expanded" : ""),
                 controllersParams,
