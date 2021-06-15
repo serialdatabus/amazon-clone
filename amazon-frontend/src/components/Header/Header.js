@@ -44,11 +44,7 @@ export default function Header() {
           <AmazonMenuItem
             className="shiping-address-container"
             default
-            labelcomponent={
-              <>
-                <img alt="" src={amazonlogo} />
-              </>
-            }
+            labelcomponent={<img alt="" src={amazonlogo} />}
           />
 
           <AmazonMenuItem
