@@ -2,7 +2,7 @@ import React, { useEffect, useLayoutEffect, useState } from "react";
 import "../../styles/AmazonMenuItem.css";
 import { handleMouseEnter, handleMouseleave } from "./controllers";
 
-export default function AamzonMenuItem(props) {
+export default function AmazonMenuItem(props) {
   const { children, className, labelcomponent, onHover, onLeave, isVisible } =
     props;
 
