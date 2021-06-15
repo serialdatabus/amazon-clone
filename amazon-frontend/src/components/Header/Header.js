@@ -20,6 +20,7 @@ import { fonticon } from "../../helpers/helpers";
 import { FloatingLanguageSelector } from "../FloatingLanguageSelector/FloatingLanguageSelector";
 import AmazonMenuItem from "../AmazonMenuItem/AmazonMenuItem";
 import { getFlagComponent } from "./controllers";
+import { NavBar } from "./NavBar";
 
 export default function Header() {
   const [sidemenuisopened, setsidemenuisopened] = useState(false);
@@ -124,26 +125,7 @@ export default function Header() {
         </div>
       </div>
 
-      <div id="header-navbar">
-        <div className="nav-left">
-          <a href="/" className="hamburger-menu" onClick={onOpenSideMenu}>
-            {fonticon(faBars, "iconbars")}
-            <span>All</span>
-          </a>
-
-          <a href="/">
-            <span>Browsing History</span>
-            {fonticon(faCaretDown, "icondown")}
-          </a>
-        </div>
-
-        <div className="nav-right">
-          <a href="/">
-            {fonticon(faShoppingBasket, "add-product-icon")}
-            <span>Add new product</span>
-          </a>
-        </div>
-      </div>
+      <NavBar onOpenSideMenu={onOpenSideMenu} />
 
       <SideMenu opened={sidemenuisopened} onCloseSideMenu={onCloseSideMenu} />
     </div>
