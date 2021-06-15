@@ -1,4 +1,4 @@
-- colocar opcao do broswr history
+- colocar opcao do broswer history
 
 - browsing history
 
@@ -8,6 +8,7 @@
 
 - add product
 
-- list ptoucyr category
+- list pprodutoscategory
 
 
+- no amazon item descobrir posicao actusalñ do elemento para evitarque toque as extremidades do ecra

@@ -2,8 +2,8 @@ import React, { useEffect, useState } from "react";
 import "../../styles/FloatingLanguageSelector.css";
 import { renderLanguages } from "./controllers";
 
-export const FloatingLanguageSelector = ({ isvisible }) => {
-  const [selectedvalue, setselectedvalue] = useState("en");
+export const FloatingLanguageSelector = ({ isvisible , selectedLanguageCallBack , selectedLanguage}) => {
+  const [selectedvalue, setselectedvalue] = useState(selectedLanguage ? selectedLanguage : "en");
 
 
 
@@ -12,6 +12,8 @@ export const FloatingLanguageSelector = ({ isvisible }) => {
     e.preventDefault();
            
     setselectedvalue(code_language);
+
+    selectedLanguageCallBack(code_language);
 
 
   }

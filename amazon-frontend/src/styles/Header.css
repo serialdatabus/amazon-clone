@@ -202,21 +202,21 @@
   font-size: 0.8em;
 }
 
-#header-container .header-column > a.myaccount-hello-message {
+#header-container .header-column > .myaccount-hello-message {
 }
 
-#header-container .header-column > a.myaccount-hello-message .hellomessage {
+#header-container .header-column > .myaccount-hello-message .hellomessage {
   color: white;
   font-size: 0.8em;
   font-weight: 600;
 }
 
-#header-container .header-column > a.myaccount-hello-message .account-link {
+#header-container .header-column > .myaccount-hello-message .account-link {
 }
 
 #header-container
   .header-column
-  > a.myaccount-hello-message
+  > .myaccount-hello-message
   .account-link
   .icondown {
   margin-left: 5px;
@@ -226,7 +226,7 @@
 
 #header-container
   .header-column
-  > a.myaccount-hello-message
+  > .myaccount-hello-message
   .account-link
   > span {
   color: white;

@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import "../../styles/Header.css";
 import amazonlogo from "../../assets/amazonlogo.png";
 import SearchBar from "./SearchBar";
-import { ReactComponent as UsaFlag } from "../../assets/usaicon.svg";
 import { useDispatch /*useSelector*/ } from "react-redux";
 import {
   showTransparentBg,
@@ -20,10 +19,11 @@ import SideMenu from "../SideMenu/SideMenu";
 import { fonticon } from "../../helpers/helpers";
 import { FloatingLanguageSelector } from "../FloatingLanguageSelector/FloatingLanguageSelector";
 import AmazonMenuItem from "../AmazonMenuItem/AmazonMenuItem";
+import { getFlagComponent } from "./controllers";
 
 export default function Header() {
   const [sidemenuisopened, setsidemenuisopened] = useState(false);
-  //const appstate = useSelector((state) => state.app);
+  const [selectedLanguage, setselectedLanguage] = useState("ko");
   const dispatch = useDispatch();
 
   const onOpenSideMenu = (e) => {
@@ -34,6 +34,9 @@ export default function Header() {
 
   const onCloseSideMenu = () => setsidemenuisopened(false);
 
+  const onSelectedLanguage = (code_language) =>
+    setselectedLanguage(code_language);
+
   return (
     <div>
       <div id="header-container">
@@ -42,13 +45,27 @@ export default function Header() {
             <img alt="" src={amazonlogo} />
           </a>
 
-          <a href="/" className="shiping-address-container">
+         
+
+
+          <AmazonMenuItem
+          className="shiping-address-container"
+            default
+            labelcomponent={<>
             <p className="shipping-address-send-to">Send to Elizeu</p>
             <p className="shipping-address">
               {fonticon(faMapMarkerAlt)}
               <span> 2845-093‌</span>
             </p>
-          </a>
+            </>}
+            
+            onHover={() => dispatch(showTransparentBg())}
+            onLeave={() => dispatch(hideTransparentBg())}
+          />
+
+
+
+
         </div>
 
         <div id="header-center" className="header-column">
@@ -56,45 +73,61 @@ export default function Header() {
         </div>
 
         <div id="header-right" className="header-column">
-     {/*     <a
-            {...languageSelectMouseEvents({
-              dispatch,
-              hideTransparentBg,
-              showTransparentBg,
-            })}
-            href="/"
-            className="language-selector hasfloatmenu"
+          <AmazonMenuItem
+        
+            labelcomponent={getFlagComponent(selectedLanguage, 24)}        
+            onHover={() => dispatch(showTransparentBg())}
+            onLeave={() => dispatch(hideTransparentBg())}
           >
-            <UsaFlag width={24} />
-            {fonticon(faCaretDown, "icondown")}
-            {}
-          </a>
-*/}
-
-
-          <AmazonMenuItem labelcomponent={ <UsaFlag width={24} />} onHover={()=>dispatch(showTransparentBg())} onLeave={()=>dispatch(hideTransparentBg())} >
-          {<FloatingLanguageSelector isvisible={true} />}
+            {
+              <FloatingLanguageSelector
+                selectedLanguageCallBack={onSelectedLanguage}
+                isvisible={true}
+                selectedLanguage={selectedLanguage}
+              />
+            }
           </AmazonMenuItem>
 
 
 
-          <a
-            href="/"
-            className="header-colum myaccount-hello-message hasfloatmenu"
-          >
+
+
+
+          <AmazonMenuItem
+          className="header-colum myaccount-hello-message"
+            labelcomponent={<>
             <span className="hellomessage">Hello, Elizeu</span>
             <span className="account-link">
               <span>Account & Lists</span>
-              {fonticon(faCaretDown, "icondown")}
+             
             </span>
-          </a>
+            </>}
+            
+            onHover={() => dispatch(showTransparentBg())}
+            onLeave={() => dispatch(hideTransparentBg())}
+          />
 
-          <a href="/" className="header-colum myaccount-hello-message">
-            <span className="hellomessage">Returns</span>
+          
+
+
+
+
+          <AmazonMenuItem
+          default
+          className="header-colum myaccount-hello-message"
+            labelcomponent={<>
+             <span className="hellomessage">Returns</span>
             <span className="account-link">
               <span>& Orders</span>
             </span>
-          </a>
+            </>}
+            
+            onHover={() => dispatch(showTransparentBg())}
+            onLeave={() => dispatch(hideTransparentBg())}
+          />
+
+
+
 
           <a href="/">
             <div id="amazoncart" className="header-colum">

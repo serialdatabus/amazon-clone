@@ -1,50 +1,79 @@
-import React, { useState } from "react";
+import React, {  useEffect, useLayoutEffect, useState } from "react";
 import "../../styles/AmazonMenuItem.css";
 
-export default function AamzonMenuItem({
-  children,
-  labelcomponent,
-  onHover,
-  onLeave,
-  isVisible
-}) {
+export default function AamzonMenuItem(props) {
+  const { children, className, labelcomponent, onHover, onLeave, isVisible } =
+    props;
 
+  const [showFloatMenu, setshowFloatMenu] = useState(isVisible);
+  const [defaultMenuItem, setdefaultMenuItem] = useState(false);
 
-    const [showFloatMenu, setshowFloatMenu] = useState(isVisible);
-
-
+  /*
   const getWidth = () =>
     window.innerWidth ||
     document.documentElement.clientWidth ||
     document.body.clientWidth;
-
+*/
   let timeoutId = null;
   const resizeListener = () => {
-  
-
-
     clearTimeout(timeoutId);
 
-
-    console.log(getWidth());
+    //console.log(getWidth());
   };
 
   const handleMousEnter = () => {
+
+    if(defaultMenuItem)
+    return;
+
+
     setshowFloatMenu(true);
     onHover();
   };
 
   const handleMouseleave = () => {
+
+    if(defaultMenuItem)
+    return;
+
+
     setshowFloatMenu(false);
     onLeave();
   };
+
+
+  useEffect(() => {
+      
+    
+        if(props.default)
+        {
+
+            setdefaultMenuItem(true);
+
+        }
+
+
+
+      return () => {
+         
+    
+      }
+  }, [props.default]);
+
+
+
+  useLayoutEffect(() => {
+    setshowFloatMenu(isVisible);
+
+    return () => {};
+  }, [isVisible]);
 
   // set resize listener
   window.addEventListener("resize", resizeListener);
 
   return (
     <div
-      className={"amazon-menu-item"+(showFloatMenu ? " showfloatmenu":"")}
+      className={"amazon-menu-item" + (showFloatMenu ? " showfloatmenu" : "")+ (defaultMenuItem ? " defaultmenuitem" : "")+" "+className}
       onMouseEnter={handleMousEnter}
       onMouseLeave={handleMouseleave}
     >

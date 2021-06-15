@@ -9,7 +9,10 @@
 }
 
 .amazon-menu-item .container1 {
-  padding-left: 8px;
+    padding-left: 8px;
+    display: flex;
+    align-items: flex-end;
+  
 }
 
 .amazon-menu-item .container2 {
@@ -110,4 +113,46 @@
   align-items: center;
   justify-content: center;
   color: black;
+}
+
+
+
+.amazon-menu-item.defaultmenuitem
+{
+
+
+
+}
+
+
+
+
+.amazon-menu-item.defaultmenuitem .container2
+{
+
+opacity: 0;
+pointer-events: none;
+
+
+}
+
+
+
+.amazon-menu-item.defaultmenuitem .arrows
+{
+
+    display: none;
+    
+}
+
+
+.amazon-menu-item.defaultmenuitem .container1,
+.amazon-menu-item.defaultmenuitem .button-content
+{
+    padding: 0;
+}
+
+.amazon-menu-item.defaultmenuitem .button-content
+{
+    padding:0  10px;
 }
