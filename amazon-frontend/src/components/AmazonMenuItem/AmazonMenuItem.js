@@ -1,5 +1,6 @@
 import React, { useEffect, useLayoutEffect, useState } from "react";
 import "../../styles/AmazonMenuItem.css";
+import { handleMousEnter, handleMouseleave } from "./controllers";
 
 export default function AamzonMenuItem(props) {
   const { children, className, labelcomponent, onHover, onLeave, isVisible } =
@@ -21,20 +22,6 @@ export default function AamzonMenuItem(props) {
     //console.log(getWidth());
   };
 
-  const handleMousEnter = () => {
-    if (defaultMenuItem) return;
-
-    setshowFloatMenu(true);
-    onHover();
-  };
-
-  const handleMouseleave = () => {
-    if (defaultMenuItem) return;
-
-    setshowFloatMenu(false);
-    onLeave();
-  };
-
   useEffect(() => {
     if (props.default) {
       setdefaultMenuItem(true);
@@ -52,6 +39,13 @@ export default function AamzonMenuItem(props) {
   // set resize listener
   window.addEventListener("resize", resizeListener);
 
+  const controllerParams = {
+    onHover,
+    setshowFloatMenu,
+    onLeave,
+    defaultMenuItem,
+  };
+
   return (
     <div
       className={
@@ -61,8 +55,8 @@ export default function AamzonMenuItem(props) {
         " " +
         className
       }
-      onMouseEnter={handleMousEnter}
-      onMouseLeave={handleMouseleave}
+      onMouseEnter={() => handleMousEnter(controllerParams)}
+      onMouseLeave={() => handleMouseleave(controllerParams)}
     >
       <div className="container1">
         <div className="button-content">{labelcomponent}</div>
