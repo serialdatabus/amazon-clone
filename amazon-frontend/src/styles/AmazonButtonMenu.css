@@ -1,0 +1,119 @@
+.amazon-button-menu
+{
+
+  border: 1px solid rgba(255, 255, 255, 0);
+  cursor: pointer;
+  display: flex;
+border-radius: 3px;
+
+height: 100%;
+}
+
+
+.amazon-button-menu .content-button-menu
+{
+
+  position: absolute;
+  width: 100%;
+  background: white;
+  height: 14em;
+  left: 0;
+  top: 100%;
+  z-index: 20;
+
+
+  -webkit-box-shadow: 0 2px 4px 0 rgb(0 0 0 / 13%);
+  -moz-box-shadow: 0 2px 4px 0 rgba(0,0,0,.13);
+  box-shadow: 0 2px 4px 0 rgb(0 0 0 / 13%);
+
+
+}
+
+.amazon-button-menu:hover
+{
+
+  border: 1px solid white;
+  
+  
+
+}
+
+.amazon-button-menu .btn-content
+{
+
+  padding: 5px;
+  
+}
+
+
+.amazon-button-menu .btn-content h4
+{
+
+color: white;
+margin: 0;
+}
+
+.amazon-button-menu .arrows
+{
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  position: relative;
+  padding: 0 5px;
+  
+}
+
+
+.amazon-button-menu .arrows .arrow-top
+{
+  content: '';
+  display: block;
+  width: 10px;
+  margin-top: 5px;
+  height: 6px;
+  background: #959595;
+  -webkit-clip-path: polygon(100% 0, 0 0, 50% 100%);
+  clip-path: polygon(100% 0, 0 0, 50% 100%);
+
+}
+
+
+.amazon-button-menu .arrows .arrow-bottom
+{
+
+  content: '';
+    display: block;
+    width: 21px;
+    height: 10px;
+    background: #ffffff;
+    position: absolute;
+    bottom: -7px;
+    -webkit-clip-path: polygon(100% 100%, 50% 0, 0 100%);
+    clip-path: polygon(100% 100%, 50% 0, 0 100%);
+}
+
+
+
+
+
+.amazon-button-menu .arrows::before
+{
+
+
+
+
+}
+
+
+.amazon-button-menu .arrows::after
+{
+
+  
+
+
+
+
+
+}

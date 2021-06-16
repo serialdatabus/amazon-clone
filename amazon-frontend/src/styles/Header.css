@@ -238,6 +238,7 @@
   background-color: #232f3e;
   display: flex;
   padding: 5px;
+  position: relative;
 }
 
 #header-navbar .nav-right,

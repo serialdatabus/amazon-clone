@@ -11,9 +11,9 @@
 - list pprodutoscategory
 
 
-- no amazon item descobrir posicao actusalñ do elemento para evitarque toque as extremidades do ecra
+- no amazon item descobrir posicao actual do elemento para evitarque toque as extremidades do ecra 
 
-- criar componente de botao de navbar com o mesmo conceito que o botao amazonmenuitem - prioridade
+- criar componente de botao de navbar com o mesmo conceito que o botao amazonmenuitem - prioridade  - done
 
 
 reaproveitar componente amazonmenuitem
@@ -35,3 +35,24 @@ menu do topo superior direito vai ter apenas
           formato lstagem produtos:
 
           https://www.amazon.es/s?i=jewelry&rh=n%3A10440411031%2Cp_72%3A831280031&page=3&pf_rd_i=10440411031&pf_rd_p=43c1f5fe-7ad9-5a01-ae3f-3142d5e6a716&pf_rd_r=PZZA3RMABYGFGMCAJB1W&pf_rd_s=merchandised-search-10&pf_rd_t=BROWSE&qid=1623736591&ref=sr_pg_3
+
+
+
+
+
+
+          na pagina principal transformar cada block em compoentes reutilizaveis
+
+          definidno como proprieadae o tipo de block
+
+
+          caixa fields:
+
+          - titulo
+
+          - tipo [ recommendations , recently viewed , ctegory , image ]
+
+          - mais organizadoe mais profissional
+
+
+          criar component slide r, igualzinho da amazon
