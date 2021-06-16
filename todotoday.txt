@@ -56,3 +56,22 @@ menu do topo superior direito vai ter apenas
 
 
           criar component slide r, igualzinho da amazon
+
+          corrigir erro de warming:
+
+
+          Warning: Expected `onClick` listener to be a function, instead got a value of `number` type.
+    at svg
+    at FontAwesomeIcon (http://127.0.0.1:3000/static/js/vendors~main.chunk.js:9985:27)
+    at h5
+    at div
+    at div
+    at AmazonButtonMenu (http://127.0.0.1:3000/static/js/main.chunk.js:1210:3)
+    at div
+    at div
+    at NavBar (http://127.0.0.1:3000/static/js/main.chunk.js:2966:3)
+    at div
+    at Header (http://127.0.0.1:3000/static/js/main.chunk.js:2620:105)
+    at div
+    at App
+    at Provider (http://127.0.0.1:3000/static/js/vendors~main.chunk.js:44796:20)

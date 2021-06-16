@@ -1,24 +1,25 @@
 import React, { useState } from "react";
 import "../../styles/AmazonButtonMenu.css";
-const AmazonButtonMenu = ({ onHover, onLeave, labelComponent, children , onClick }) => {
- 
+const AmazonButtonMenu = ({
+  onHover,
+  onLeave,
+  labelComponent,
+  children,
+  onClick,
+  className
+}) => {
   const [showFloatMenu, setShowFloatMenu] = useState(false);
   let timeoutId = null;
   return (
     <div
-      className="amazon-button-menu"
-
+      className={"amazon-button-menu "+className}
 
       onClick={onClick}
-
+  
       onMouseEnter={() => {
+        if (!children || !onHover) return;
 
-        if(!children)
-        return;
-        
         clearTimeout(timeoutId);
-
-
 
         timeoutId = setTimeout(() => {
           setShowFloatMenu(true);
@@ -26,9 +27,7 @@ const AmazonButtonMenu = ({ onHover, onLeave, labelComponent, children , onClick
         }, 220);
       }}
       onMouseLeave={() => {
-
-        if(!children)
-        return;
+        if (!children || !onLeave) return;
 
         clearTimeout(timeoutId);
 
@@ -39,12 +38,13 @@ const AmazonButtonMenu = ({ onHover, onLeave, labelComponent, children , onClick
       }}
     >
       <div className="btn-content">{labelComponent}</div>
-      {children && <div className="arrows">
-        <div className="arrow-top"></div>
-        {showFloatMenu && <div className="arrow-bottom"></div>}
-      </div>
-      }
-      {(showFloatMenu && children) && <div className="content-button-menu"></div>}
+      {children && (
+        <div className="arrows">
+          <div className="arrow-top"></div>
+          {showFloatMenu && <div className="arrow-bottom"></div>}
+        </div>
+      )}
+      {showFloatMenu && children && <div className="content-button-menu"></div>}
     </div>
   );
 };

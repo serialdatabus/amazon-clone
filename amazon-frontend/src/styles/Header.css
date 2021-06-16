@@ -284,9 +284,11 @@
   border: 1px solid white;
 }
 
-#header-navbar .nav-left a .iconbars {
+#header-navbar  .iconbars {
   color: white;
-  margin-right: 5px;
+font-size: 18px;;
+
+
 }
 
 #header-navbar .nav-right span,
@@ -325,4 +327,12 @@
 }
 
 #amazoncart .right-cart {
+}
+
+
+.amazon-button-menu.browsinghistory
+{
+
+margin-left: 20px;
+
 }
