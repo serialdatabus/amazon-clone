@@ -3,6 +3,7 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css"; 
 import AmazonCarousel from "./AmazonCarousel";
 import '../../styles/Homepage.css';
+import AmazonBlock from "../AmazonBlock/AmazonBlock";
 
 
 const Homepage = () => {
@@ -12,6 +13,18 @@ const Homepage = () => {
 
             <AmazonCarousel />
 
+
+
+            <div className="amazon-blocks-container">
+                <AmazonBlock />
+
+                <AmazonBlock />
+
+                <AmazonBlock />
+
+
+                <AmazonBlock />
+            </div>
 
             
 

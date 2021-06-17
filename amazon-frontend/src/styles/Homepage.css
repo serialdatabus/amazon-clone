@@ -11,7 +11,7 @@
 {
 
 width: 100%;
-height:80vh;
+height:50vh;
 
 }
 
@@ -29,17 +29,42 @@ height:80vh;
 
 
     overflow: hidden;
+    position: relative;
 
 }
 
 
 
-
-.amazon-carousel::after
+.amazon-carousel .item-slider a
 {
 
+    position: relative;
+    display: inline-block;
+}
 
-  display: content;
+
+
+.amazon-carousel.slick-slider a::after
+{
+
+     content: "";
+    display: block;
+    position: absolute;
+
+    bottom: 0;
+    height: 100%;
+    left: 0;
+    width: 100%;
+    z-index: 2;
+    pointer-events: none;
+
+
+    background: rgb(255,255,255);
+    background: -moz-linear-gradient(180deg, rgba(255,255,255,0) 61%, rgba(234,237,237,1) 100%);
+    background: -webkit-linear-gradient(180deg, rgba(255,255,255,0) 61%, rgba(234,237,237,1) 100%);
+    background: linear-gradient(180deg, rgba(255,255,255,0) 61%, rgba(234,237,237,1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#ffffff",endColorstr="#eaeded",GradientType=1);
+
 
 }
 
@@ -101,5 +126,17 @@ height:80vh;
 
 font-size: 4em;
 color: white;
+
+}
+
+
+#homepage .amazon-blocks-container
+{
+
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-around;
+    margin-top: 2em;
+
 
 }

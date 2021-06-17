@@ -18,6 +18,7 @@ export default function BrowsingHistory() {
         <div className="browsing-history">
           {items.map((item, index) => (
             <HistoryItem
+            key={index}
               hideDate={index > 0}
               onDelete={() => setItems(items.slice(0, -1))}
             />
@@ -25,7 +26,7 @@ export default function BrowsingHistory() {
 
           <HistoryItem fullhistory />
 
-          <div class="history-grey-bar"></div>
+          <div className="history-grey-bar"></div>
         </div>
       )}
 

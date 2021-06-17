@@ -32,11 +32,11 @@ export const NavBar = ({ onOpenSideMenu }) => {
         >
           
 
-          <div class="label-top-history">
+          <div className="label-top-history">
             <span>Your browsing history</span>
             <a href="/">View and edit</a>
           </div>
-          <div class="browsing-history-wrapper"><BrowsingHistory /></div>
+          <div className="browsing-history-wrapper"><BrowsingHistory /></div>
 
 
         </AmazonButtonMenu>
