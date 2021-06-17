@@ -1,32 +1,45 @@
-import React, { useEffect, /*useState*/ } from "react";
+import React, { useEffect, useState /*useState*/ } from "react";
 import { HistoryItem } from "./HistoryItem";
 import "../../styles/BrowsingHistory.css";
 
 export default function BrowsingHistory() {
-
-  //const [state, setstate] = useState();
+  const [items, setItems] = useState([2343324, 213213, 21321, 3, 43345]);
 
   useEffect(() => {
-    
-    return () => {
-      
-    }
-  }, [])
-  
-  return(
+    return () => {};
+  }, []);
 
-      <div className="browsing-history">
-       
+  const thereisItems = items.length > 0;
+  const itemsAreEmpty = items.length === 0;
 
-       <HistoryItem />
-       <HistoryItem />
-       <HistoryItem />
-       <HistoryItem />
-     
+  return (
+    <>
+      {thereisItems && (
+        <div className="browsing-history">
+          {items.map((item, index) => (
+            <HistoryItem
+              hideDate={index > 0}
+              onDelete={() => setItems(items.slice(0, -1))}
+            />
+          ))}
 
-     </div>
+          {thereisItems && <HistoryItem fullhistory />}
 
+          {thereisItems && <div class="history-grey-bar"></div>}
+        </div>
+      )}
+
+      {itemsAreEmpty && (
+        <>
+          {" "}
+          <h4 className="no-items-first-text">
+            Your shopping history is empty
+          </h4>
+          <p className="no-items-second-text">
+            Check back here to see items you shop for on any device.
+          </p>
+        </>
+      )}
+    </>
   );
-
-
 }

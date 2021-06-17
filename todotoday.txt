@@ -75,3 +75,8 @@ menu do topo superior direito vai ter apenas
     at div
     at App
     at Provider (http://127.0.0.1:3000/static/js/vendors~main.chunk.js:44796:20)
+
+
+
+
+    texto de "enviar a elieu" tem de tar a cinzento"

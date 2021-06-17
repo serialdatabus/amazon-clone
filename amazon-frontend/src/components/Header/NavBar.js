@@ -5,6 +5,7 @@ import {
   hideTransparentBg,
 } from "../../redux-slices/appslice";
 import AmazonButtonMenu from "../AmazonButtonMenu/AmazonButtonMenu";
+import BrowsingHistory from "../BrowsingHistory/BrowsingHistory";
 import { renderTitleNavBar } from "./controllers";
 
 export const NavBar = ({ onOpenSideMenu }) => {
@@ -29,7 +30,15 @@ export const NavBar = ({ onOpenSideMenu }) => {
           }}
           labelComponent={renderTitleNavBar("Browsing History")}
         >
-          <h1>Conteudo</h1>
+          
+
+          <div class="label-top-history">
+            <span>Your browsing history</span>
+            <a href="/">View and edit</a>
+          </div>
+          <div class="browsing-history-wrapper"><BrowsingHistory /></div>
+
+
         </AmazonButtonMenu>
       </div>
 

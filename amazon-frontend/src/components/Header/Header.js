@@ -33,7 +33,8 @@ export default function Header() {
   const onCloseSideMenu = () => setsidemenuisopened(false);
 
   const onSelectedLanguage = (code_language) =>
-    setselectedLanguage(code_language);
+  
+  setselectedLanguage(code_language);
 
   return (
     <div>
@@ -44,6 +45,9 @@ export default function Header() {
             default
             labelcomponent={<img alt="" src={amazonlogo} />}
           />
+
+
+
 
           <AmazonMenuItem
             className="shiping-address-container"
@@ -125,6 +129,7 @@ export default function Header() {
       <NavBar onOpenSideMenu={onOpenSideMenu} />
 
       <SideMenu opened={sidemenuisopened} onCloseSideMenu={onCloseSideMenu} />
+ 
     </div>
   );
 }

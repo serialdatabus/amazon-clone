@@ -4,7 +4,10 @@ export const handleMouseEnter = (controllerParams) => {
   if (defaultMenuItem) return;
 
   setshowFloatMenu(true);
+ 
+ if(onHover){
   onHover();
+ }
 };
 
 export const handleMouseleave = (controllerParams) => {
@@ -13,5 +16,7 @@ export const handleMouseleave = (controllerParams) => {
   if (defaultMenuItem) return;
 
   setshowFloatMenu(false);
-  onLeave();
+  if(onLeave){
+    onLeave();
+   }
 };
