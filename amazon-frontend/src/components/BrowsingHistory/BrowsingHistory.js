@@ -23,9 +23,9 @@ export default function BrowsingHistory() {
             />
           ))}
 
-          {thereisItems && <HistoryItem fullhistory />}
+          <HistoryItem fullhistory />
 
-          {thereisItems && <div class="history-grey-bar"></div>}
+          <div class="history-grey-bar"></div>
         </div>
       )}
 
