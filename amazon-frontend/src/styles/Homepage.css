@@ -1,142 +1,104 @@
-#homepage
-{
-
-    background-color: #eaeded;
-    flex: 1;
-    padding: 0 14em;
-
+#homepage {
+  background-color: #eaeded;
+  flex: 1;
+  padding: 0px 12em;
 }
 
-.item-slider
-{
-
-width: 100%;
-height:50vh;
-
+.item-slider {
+  width: 100%;
+  height: 50vh;
 }
 
-
-
-.item-slider img
-{
-
-    width: 100%;
-
+.item-slider img {
+  width: 100%;
 }
 
-.amazon-carousel
-{
-
-
-    overflow: hidden;
-    position: relative;
-
+.amazon-carousel {
+  overflow: hidden;
+  position: absolute;
+  width: calc(100% - 24em);
+  left: 50%;
+  transform: translateX(-50%);
 }
 
-
-
-.amazon-carousel .item-slider a
-{
-
-    position: relative;
-    display: inline-block;
+.amazon-carousel .item-slider a {
+  width: 100%;
+  position: relative;
+  display: inline-block;
 }
 
+.amazon-carousel.slick-slider a::after {
+  content: "";
+  display: block;
+  position: absolute;
 
+  bottom: 0;
+  height: 100%;
+  left: 0;
+  width: 100%;
+  z-index: 2;
+  pointer-events: none;
 
-.amazon-carousel.slick-slider a::after
-{
-
-     content: "";
-    display: block;
-    position: absolute;
-
-    bottom: 0;
-    height: 100%;
-    left: 0;
-    width: 100%;
-    z-index: 2;
-    pointer-events: none;
-
-
-    background: rgb(255,255,255);
-    background: -moz-linear-gradient(180deg, rgba(255,255,255,0) 61%, rgba(234,237,237,1) 100%);
-    background: -webkit-linear-gradient(180deg, rgba(255,255,255,0) 61%, rgba(234,237,237,1) 100%);
-    background: linear-gradient(180deg, rgba(255,255,255,0) 61%, rgba(234,237,237,1) 100%);
-    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#ffffff",endColorstr="#eaeded",GradientType=1);
-
-
+  background: rgb(255, 255, 255);
+  background: -moz-linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 0) 61%,
+    rgba(234, 237, 237, 1) 100%
+  );
+  background: -webkit-linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 0) 61%,
+    rgba(234, 237, 237, 1) 100%
+  );
+  background: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 0) 61%,
+    rgba(234, 237, 237, 1) 100%
+  );
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#ffffff",endColorstr="#eaeded",GradientType=1);
 }
 
-
-
-.amazon-carousel .prevArrow
-{
-
-
-    left: 10px;
-    z-index: 3;
-
+.amazon-carousel .prevArrow {
+  left: 10px;
+  z-index: 3;
 }
 
-
-
-
-
-.amazon-carousel .nextArrow
-{
-
-    right: 10px;
-    z-index: 3;
+.amazon-carousel .nextArrow {
+  right: 10px;
+  z-index: 3;
 }
 
-
-
-
-
-
-.amazon-carousel .arrow
-{
-
-    position: absolute;
-    height: 18em;
-    z-index: 1;
-    padding: 0 1em;
-    border: 2px solid rgba(255, 255, 255, 0);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    top: 0;
-    cursor: pointer;
-
+.amazon-carousel .arrow {
+  position: absolute;
+  height: 18em;
+  z-index: 1;
+  padding: 0 1em;
+  border: 2px solid rgba(255, 255, 255, 0);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  top: 0;
+  cursor: pointer;
 }
 
-.amazon-carousel .arrow:hover
-{
-
-
-    border: 2px solid white;
-    border-radius: 0.4em;
-
+.amazon-carousel .arrow:hover {
+  border: 2px solid white;
+  border-radius: 0.4em;
 }
 
-
-.amazon-carousel .arrow svg
-{
-
-font-size: 4em;
-color: white;
-
+.amazon-carousel .arrow svg {
+  font-size: 4em;
+  color: white;
 }
 
+#homepage .amazon-blocks-container {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-around;
+  margin-bottom: 1em;
+}
 
-#homepage .amazon-blocks-container
-{
-
-    display: flex;
-    align-items: flex-start;
-    justify-content: space-around;
-    margin-top: 2em;
-
-
+#home-content-block {
+  width: 100%;
+  margin-top: 18em;
 }
