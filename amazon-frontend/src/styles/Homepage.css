@@ -16,7 +16,7 @@
 .amazon-carousel {
   overflow: hidden;
   position: absolute;
-  width: calc(100% - 24em);
+  width: calc(100% - 22.4em);
   left: 50%;
   transform: translateX(-50%);
 }
