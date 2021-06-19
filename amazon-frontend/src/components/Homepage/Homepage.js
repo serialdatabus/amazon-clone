@@ -95,7 +95,7 @@ const Homepage = () => {
      
      
 
-        <AmazonFeedCarousel />
+        <AmazonFeedCarousel imageHeight="13em" imageWidth="13em" />
 
     
       <br/>
@@ -108,3 +108,4 @@ const Homepage = () => {
 };
 
 export default Homepage;
+ 

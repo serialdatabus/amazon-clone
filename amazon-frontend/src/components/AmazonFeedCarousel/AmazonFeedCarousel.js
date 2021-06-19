@@ -7,7 +7,7 @@ import { fonticon } from "../../helpers/helpers";
 import "../../styles/AmazonFeedCarousel.css";
 import { items } from "./controllers";
 
-const AmazonFeedCarousel = () => {
+const AmazonFeedCarousel = ({ imageHeight , imageWidth }) => {
   const refCarousel = useRef(null);
   const refItemsList = useRef(null);
 
@@ -16,26 +16,6 @@ const AmazonFeedCarousel = () => {
   const [currentPosition, setCurrentPosition] = useState(0);
   const [step, setStep] = useState(100);
 
-  /*
-  const updateDimensions =   () => {
-    const _carouselwidth = refCarousel.current
-      ? refCarousel.current.offsetWidth
-      : 0;
-
-    const _itemslistwidth = refItemsList.current
-      ? refItemsList.current.offsetWidth
-      : 0;
-
-    console.log("carouselwidth: " + _carouselwidth);
-    setCarouselWidth(_carouselwidth);
-
-    console.log("itemslistwidth: " + _itemslistwidth);
-    setItemsListWidth(_itemslistwidth);
-
-    setStep(carouselwidth / 2);
-  };
-
-*/
 
   const updateDimensions = useCallback(() => {
     const _carouselwidth = refCarousel.current
@@ -86,11 +66,11 @@ const AmazonFeedCarousel = () => {
   return (
     
     <div class="container-amazon-feed-carousel">
-    <div className="amazon-feed-carousel" ref={refCarousel}>
-      <a href="/" onClick={goLeft} className="scroll-left-btn">
+    <div className="amazon-feed-carousel" style={{ height: imageHeight }} ref={refCarousel}>
+      <a href="/" onClick={goLeft} className="scroll-left-btn btn-scroll">
         {fonticon(faChevronLeft)}
       </a>
-      <a href="/" onClick={goRight} className="scroll-right-btn">
+      <a href="/" onClick={goRight} className="scroll-right-btn btn-scroll">
         {fonticon(faChevronRight)}
       </a>
 
@@ -100,7 +80,7 @@ const AmazonFeedCarousel = () => {
         ref={refItemsList}
       >
         {items.map((item, index) => (
-          <img alt="" key={index} src={item.image_url} />
+          <img style={{ height: imageHeight , width: imageWidth  }} alt="" key={index} src={item.image_url} />
         ))}
       </div>
     </div>
