@@ -14,7 +14,7 @@ const AmazonBlock = ({
     <div className="amazon-block" style={{}}>
       <div className="block-header">
         {icon && type === "history" && (
-          <div class="block-icon">{fonticon(icon)}</div>
+          <div className="block-icon">{fonticon(icon)}</div>
         )}
 
         <div className="block-title">
@@ -28,7 +28,7 @@ const AmazonBlock = ({
         <a href="/">
           <img
           alt=""
-            class="singleimage"
+            className="singleimage"
             src="https://images-na.ssl-images-amazon.com/images/G/01/AmazonExports/Fuji/2021/June/Fuji_Dash_Oculus_1x._SY304_CB667158353_.jpg"
           ></img>
         </a>
@@ -60,7 +60,7 @@ const AmazonBlock = ({
 
               <div className="line-product">
                 {data.slice(2, 4).map((item, index) => (
-                  <div className="block-grid-product">
+                  <div key={index} className="block-grid-product">
                     <img alt="" src={item.image_url} />
 
                     <p>{item.label}</p>

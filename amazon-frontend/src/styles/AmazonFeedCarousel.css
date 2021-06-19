@@ -1,0 +1,63 @@
+.container-amazon-feed-carousel
+{
+
+    padding: 1em;
+background-color: white;
+}
+
+
+.amazon-feed-carousel {
+  overflow: hidden;
+  position: relative;
+  display: block;
+  height: 11em;
+
+}
+
+.amazon-feed-carousel .items-list {
+  background-color: white;
+  display: flex;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  transition: all ease 0.6s;
+  /* width: 100%; */
+}
+
+.amazon-feed-carousel .items-list img {
+  width: 11em;
+  height: 11em;
+  object-fit: contain;
+  margin: 0 10px;
+}
+
+.amazon-feed-carousel .scroll-left-btn svg,
+.amazon-feed-carousel .scroll-right-btn svg {
+  font-size: 3em;
+  color: #5d6771;
+}
+
+.amazon-feed-carousel .scroll-left-btn,
+.amazon-feed-carousel .scroll-right-btn {
+  height: 8em;
+  width: 4em;
+  background: white;
+  position: absolute;
+  z-index: 3;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #8dc6ce;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+}
+
+.amazon-feed-carousel .scroll-left-btn {
+    border-left: none;
+}
+
+.amazon-feed-carousel .scroll-right-btn {
+  right: 0;
+  border-right: none;
+}

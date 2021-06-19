@@ -94,7 +94,8 @@
 #homepage .amazon-blocks-container {
   display: flex;
   align-items: flex-start;
-  justify-content: space-around;
+  justify-content: space-between;
+  
   margin-bottom: 1em;
 }
 

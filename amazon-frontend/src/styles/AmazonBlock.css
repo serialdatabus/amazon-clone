@@ -89,8 +89,8 @@
 }
 
 .amazon-block .block-content .block-grid-products .block-grid-product img {
-  max-width: 80px;
-  max-height: 80px;
+  width: 80px;
+  height: 80px;
   object-fit: contain;
 }
 

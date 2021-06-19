@@ -6,6 +6,7 @@ import AmazonBlock from "../AmazonBlock/AmazonBlock";
 import "../../styles/Homepage.css";
 import { faUser } from "@fortawesome/free-solid-svg-icons";
 import { blockhello } from "./controllers";
+import AmazonFeedCarousel from "../AmazonFeedCarousel/AmazonFeedCarousel";
 
 const Homepage = () => {
   return (
@@ -91,6 +92,16 @@ const Homepage = () => {
             data={blockhello}
           />
         </div>
+     
+     
+
+        <AmazonFeedCarousel />
+
+    
+      <br/>
+         
+      <br/>
+     
       </div>
     </div>
   );
