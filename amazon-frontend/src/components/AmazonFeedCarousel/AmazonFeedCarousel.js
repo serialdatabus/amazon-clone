@@ -83,7 +83,17 @@ const AmazonFeedCarousel = ({ imageHeight , imageWidth }) => {
           <img style={{ height: imageHeight , width: imageWidth  }} alt="" key={index} src={item.image_url} />
         ))}
       </div>
+
+      <div class="carousel-bar-container">
+          <div class="carousel-bar" style={{width: `${   (carouselwidth / itemslistwidth)*100    }%`    }}>
+
+          </div>
+      </div>
+
+
     </div>
+
+      
 
     </div>
   );

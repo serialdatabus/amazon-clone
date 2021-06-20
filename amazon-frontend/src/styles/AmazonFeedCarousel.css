@@ -71,3 +71,34 @@ background-color: white;
   right: 0;
   border-right: none;
 }
+
+
+
+.amazon-feed-carousel .carousel-bar-container
+{
+
+
+  z-index: 100;
+  position: absolute;
+  /* margin-bottom: 10px; */
+  width: 100%;
+  bottom: 0;
+height: 10px;
+
+}
+
+
+
+
+.amazon-feed-carousel .carousel-bar-container .carousel-bar
+{
+
+  position: absolute;
+  left:0;
+
+  height: 10px;
+  background: #c7d2d6;
+
+height: 100%;
+  
+}
