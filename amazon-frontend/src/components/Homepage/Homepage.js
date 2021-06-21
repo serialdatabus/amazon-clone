@@ -126,7 +126,7 @@ const Homepage = () => {
 
 <AmazonFeedCarousel
 data={datacarousel3}
-          headerTitle="Men's Dress Shirts under $30s"
+          headerTitle="Technology Gadgets and Books"
           titleLink="Shop now"
           urlLink="http://sapo.pt"
           imageHeight={200}
