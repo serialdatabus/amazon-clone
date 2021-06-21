@@ -1,0 +1,30 @@
+#footer {
+}
+
+#footer .back-to-top {
+  background-color: #37475a;
+  /* display: block; */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1em;
+  color: white;
+}
+
+#footer .back-to-top span {
+}
+
+#footer .amazon-logo {
+  background-color: #232f3e;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 3em;
+}
+
+#footer .amazon-logo a {
+}
+
+#footer .amazon-logo img {
+  width: 7em;
+}

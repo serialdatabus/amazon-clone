@@ -27,7 +27,7 @@ const AmazonBlock = ({
       {type === "single" && (
         <a href="/">
           <img
-          alt=""
+            alt=""
             className="singleimage"
             src="https://images-na.ssl-images-amazon.com/images/G/01/AmazonExports/Fuji/2021/June/Fuji_Dash_Oculus_1x._SY304_CB667158353_.jpg"
           ></img>
@@ -39,7 +39,7 @@ const AmazonBlock = ({
           {type === "history" && (
             <a href="/">
               <img
-              alt=""
+                alt=""
                 className="history-image"
                 src="https://m.media-amazon.com/images/I/51d5Qk88PDL._AC_SL260_.jpg"
               />

@@ -1,30 +1,48 @@
-.container-amazon-feed-carousel
-{
-
-    padding: 1em;
-background-color: white;
+.container-amazon-feed-carousel {
+  padding: 7px 15px;
+  background-color: white;
+  margin-bottom: 1em;
 }
 
+.container-amazon-feed-carousel .header-info {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 10px 5px;
+  margin-bottom: 5px;
+}
+
+.container-amazon-feed-carousel .header-info h2 {
+  color: #444;
+  font-weight: 400;
+  margin: 0;
+}
+
+.container-amazon-feed-carousel .header-info a {
+  margin-left: 10px;
+  color: #007185;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+.container-amazon-feed-carousel .header-info a:hover {
+  text-decoration: underline;
+}
 
 .amazon-feed-carousel {
-
-
   overflow: hidden;
   position: relative;
   display: block;
-
-
 }
 
-
 .amazon-feed-carousel .btn-scroll {
-    opacity: 0;
-    transition: all 0.6s ease;
-  }
-  
-  .amazon-feed-carousel:hover .btn-scroll {
-    opacity: 1;
-  }
+  transition: all ease 0.6s;
+  opacity: 0;
+}
+
+.amazon-feed-carousel:hover .btn-scroll {
+  opacity: 1;
+}
 
 .amazon-feed-carousel .items-list {
   background-color: white;
@@ -43,14 +61,14 @@ background-color: white;
 
 .amazon-feed-carousel .scroll-left-btn svg,
 .amazon-feed-carousel .scroll-right-btn svg {
-  font-size: 3em;
+  font-size: 2em;
   color: #5d6771;
 }
 
 .amazon-feed-carousel .scroll-left-btn,
 .amazon-feed-carousel .scroll-right-btn {
-  height: 8em;
-  width: 4em;
+  height: 100px;
+  width: 45px;
   background: white;
   position: absolute;
   z-index: 3;
@@ -64,7 +82,7 @@ background-color: white;
 }
 
 .amazon-feed-carousel .scroll-left-btn {
-    border-left: none;
+  border-left: none;
 }
 
 .amazon-feed-carousel .scroll-right-btn {
@@ -72,33 +90,36 @@ background-color: white;
   border-right: none;
 }
 
-
-
-.amazon-feed-carousel .carousel-bar-container
-{
-
-
+.amazon-feed-carousel .carousel-bar-container {
   z-index: 100;
   position: absolute;
   /* margin-bottom: 10px; */
   width: 100%;
-  bottom: 0;
-height: 10px;
-
+  bottom: -3px;
+  height: 10px;
 }
 
-
-
-
-.amazon-feed-carousel .carousel-bar-container .carousel-bar
-{
-
+.amazon-feed-carousel .carousel-bar-container .carousel-bar {
   position: absolute;
-  left:0;
-
+  left: 0;
+  transition: all ease 0.6s;
   height: 10px;
-  background: #c7d2d6;
+  background: #aaa;
+  height: 100%;
+  height: 6px;
+  border-radius: 6px;
+  opacity: 0;
+}
 
-height: 100%;
-  
+.amazon-feed-carousel:hover .carousel-bar-container .carousel-bar {
+  opacity: 1;
+}
+
+.amazon-feed-carousel .carousel-bar-container .carousel-bar:hover {
+  background: #888;
+}
+
+.amazon-feed-carousel .items-list.notransition,
+.amazon-feed-carousel .carousel-bar-container .carousel-bar.notransition {
+  transition: none;
 }

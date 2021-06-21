@@ -1,7 +1,7 @@
 #homepage {
   background-color: #eaeded;
   flex: 1;
-  padding: 0px 12em;
+  /*padding: 0px 12em;*/
 }
 
 .item-slider {
@@ -102,4 +102,6 @@
 #home-content-block {
   width: 100%;
   margin-top: 18em;
+  padding: 0 12em;
+  margin-bottom: 8em;
 }

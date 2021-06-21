@@ -5,57 +5,63 @@ import {
 import React, { useCallback, useEffect, useRef, useState } from "react";
 import { fonticon } from "../../helpers/helpers";
 import "../../styles/AmazonFeedCarousel.css";
-import { items } from "./controllers";
+import { componentController } from "./controllers";
+import { DraggableCore } from "react-draggable";
 
-const AmazonFeedCarousel = ({ imageHeight , imageWidth }) => {
+const AmazonFeedCarousel = ({
+  imageHeight,
+  imageWidth,
+  headerTitle,
+  titleLink,
+  urlLink,
+  data,
+}) => {
   const refCarousel = useRef(null);
   const refItemsList = useRef(null);
+  const refImageItem = useRef(null);
 
   const [carouselwidth, setCarouselWidth] = useState(0);
   const [itemslistwidth, setItemsListWidth] = useState(0);
   const [currentPosition, setCurrentPosition] = useState(0);
+  const [imageItemWidth, setImageItemWidth] = useState(0);
+  const [xPosStart, setXPosStart] = useState(0); //
   const [step, setStep] = useState(100);
+  const [isDragging, setIsDragging] = useState(false);
+  const [barPosition, setBarPosition] = useState(0);
 
+  const {
+    callBackUpdateDimensions,
+    goLeft,
+    goRight,
+    getBarWidthPercent,
+    onDragHandler,
+    onStartDrag,
+    onEndDrag,
+  } = componentController({
+    carouselwidth,
+    setCarouselWidth,
+    itemslistwidth,
+    setItemsListWidth,
+    currentPosition,
+    setCurrentPosition,
+    imageItemWidth,
+    setImageItemWidth,
+    xPosStart,
+    setXPosStart,
+    step,
+    setStep,
+    isDragging,
+    setIsDragging,
+    barPosition,
+    refCarousel,
+    refItemsList,
+    setBarPosition,
+  });
 
-  const updateDimensions = useCallback(() => {
-    const _carouselwidth = refCarousel.current
-      ? refCarousel.current.offsetWidth
-      : 0;
+  const updateDimensions = useCallback(callBackUpdateDimensions, [
+    callBackUpdateDimensions,
+  ]);
 
-    const _itemslistwidth = refItemsList.current
-      ? refItemsList.current.offsetWidth
-      : 0;
-
-    console.log("carouselwidth: " + _carouselwidth);
-    setCarouselWidth(_carouselwidth);
-
-    console.log("itemslistwidth: " + _itemslistwidth);
-    setItemsListWidth(_itemslistwidth);
-
-    setStep(carouselwidth / 2);
-  }, [carouselwidth]);
-
-  const goLeft = (e) => {
-    e.preventDefault();
-    let nextPos = currentPosition + step;
-    nextPos = nextPos > 0 ? 0 : nextPos;
-    setCurrentPosition(nextPos);
-  };
-
-  const goRight = (e) => {
-    e.preventDefault();
-
-    let nextPos = currentPosition - step;
-    console.log(nextPos);
-    nextPos =
-      nextPos < carouselwidth - itemslistwidth
-        ? carouselwidth - itemslistwidth
-        : nextPos;
-
-    setCurrentPosition(nextPos);
-  };
-
-  // useEffect(configureCarousel,[updateDimensions]);
   useEffect(() => {
     window.addEventListener("resize", updateDimensions);
     updateDimensions();
@@ -64,37 +70,59 @@ const AmazonFeedCarousel = ({ imageHeight , imageWidth }) => {
   }, [updateDimensions]);
 
   return (
-    
     <div class="container-amazon-feed-carousel">
-    <div className="amazon-feed-carousel" style={{ height: imageHeight }} ref={refCarousel}>
-      <a href="/" onClick={goLeft} className="scroll-left-btn btn-scroll">
-        {fonticon(faChevronLeft)}
-      </a>
-      <a href="/" onClick={goRight} className="scroll-right-btn btn-scroll">
-        {fonticon(faChevronRight)}
-      </a>
-
+      {headerTitle === "" && urlLink === "" && (
+        <div style={{ padding: 12 }}></div>
+      )}
+      <div class="header-info">
+        {headerTitle && <h2>{headerTitle}</h2>}
+        {titleLink && <a href={urlLink}>{titleLink}</a>}
+      </div>
       <div
-        className="items-list"
-        style={{ left: currentPosition }}
-        ref={refItemsList}
+        className="amazon-feed-carousel"
+        style={{ height: imageHeight + 25 }}
+        ref={refCarousel}
       >
-        {items.map((item, index) => (
-          <img style={{ height: imageHeight , width: imageWidth  }} alt="" key={index} src={item.image_url} />
-        ))}
+        <a href="/" onClick={goLeft} className="scroll-left-btn btn-scroll">
+          {fonticon(faChevronLeft)}
+        </a>
+        <a href="/" onClick={goRight} className="scroll-right-btn btn-scroll">
+          {fonticon(faChevronRight)}
+        </a>
+
+        <div
+          className={"items-list" + (isDragging ? " notransition" : "")}
+          style={{ transform: "translateX(" + currentPosition + "px)" }}
+          ref={refItemsList}
+        >
+          {data.map((item, index) => (
+            <img
+              ref={refImageItem}
+              style={{ height: imageHeight, width: imageWidth }}
+              alt=""
+              key={index}
+              src={item.img_url}
+            />
+          ))}
+        </div>
+
+        <div class="carousel-bar-container">
+          <DraggableCore
+            axis="none"
+            onDrag={onDragHandler}
+            onStart={onStartDrag}
+            onStop={onEndDrag}
+          >
+            <div
+              className={"carousel-bar" + (isDragging ? " notransition" : "")}
+              style={{
+                left: barPosition,
+                width: `${getBarWidthPercent()}%`,
+              }}
+            ></div>
+          </DraggableCore>
+        </div>
       </div>
-
-      <div class="carousel-bar-container">
-          <div class="carousel-bar" style={{width: `${   (carouselwidth / itemslistwidth)*100    }%`    }}>
-
-          </div>
-      </div>
-
-
-    </div>
-
-      
-
     </div>
   );
 };
