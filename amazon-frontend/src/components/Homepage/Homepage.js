@@ -7,7 +7,6 @@ import "../../styles/Homepage.css";
 import { faUser } from "@fortawesome/free-solid-svg-icons";
 import { blockhello, datacarousel1, datacarousel2, datacarousel3 } from "./controllers";
 import AmazonFeedCarousel from "../AmazonFeedCarousel/AmazonFeedCarousel";
-import Footer from "../Footer/Footer";
 
 const Homepage = () => {
   return (
@@ -141,7 +140,7 @@ data={datacarousel3}
 
 
 
-      <Footer />
+  
    
    
    
