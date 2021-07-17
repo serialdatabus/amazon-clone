@@ -180,7 +180,7 @@ Project Link: [https://github.com/serialdatabus/amazon-clone](https://github.com
 [issues-shield]: https://img.shields.io/github/issues/othneildrew/Best-README-Template.svg?style=for-the-badge
 [issues-url]: https://github.com/othneildrew/Best-README-Template/issues
 [license-shield]: https://img.shields.io/github/license/othneildrew/Best-README-Template.svg?style=for-the-badge
-[license-url]: https://github.com/serialdatabus/flickr-image-search/blob/main/LICENSE.txt
+[license-url]: https://github.com/serialdatabus/amazon-clone/blob/main/LICENSE.txt
 [linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
 [linkedin-url]: https://www.linkedin.com/in/elizeu-carlos-618941121/
 [product-screenshot]: images/flickr-app.png
