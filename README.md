@@ -24,7 +24,7 @@
 <!-- PROJECT LOGO -->
 <br />
 <p align="center">
-  <a href="https://github.com/serialdatabus/flickr-image-search">
+  <a href="https://github.com/serialdatabus/amazon-clone">
     <img src="images/app.png" style="width:380px;height:380px;object-fit:cover;" alt="Logo">
   </a>
 
@@ -35,9 +35,9 @@
       <br/>
     <a target="_blank" href="https://main--fervent-goodall-3079eb.netlify.app/">View App</a>
     ·
-    <a href="https://github.com/serialdatabus/flickr-image-search/issues">Report Bug</a>
+    <a href="https://github.com/serialdatabus/amazon-clone/issues">Report Bug</a>
     ·
-    <a href="https://github.com/serialdatabus/flickr-image-search/issues">Request Feature</a>
+    <a href="https://github.com/serialdatabus/amazon-clone/issues">Request Feature</a>
   </p>
 </p>
 
@@ -77,7 +77,8 @@
 [![Product Name Screen Shot][product-screenshot]](https://example.com)
 
 
-An insanely easy interface to search flickr photos.
+Just another full stack amazon clone that you can use as inspiration for your next online store.
+
 
 
 
@@ -95,18 +96,13 @@ To get a local copy up and running follow these simple example steps.
 
 ### Installation
 
-1. Get a free API Key at [https://www.flickr.com/services/developer/api/](https://www.flickr.com/services/developer/api/)
-2. Clone the repo
-   ```sh
-   git clone https://github.com/serialdatabus/flickr-image-search.git
-   ```
-3. Install NPM packages
+1. Install NPM packages
    ```sh
    npm install
    ```
-4. Create a `.env` file in the root of your react project and enter the environment variable below for the API KEY
+2. Execute the web application
    ```JS
-   REACT_APP_API_KEY='ENTER YOUR API';
+   npm start
    ```
 
 
@@ -152,7 +148,7 @@ Distributed under the MIT License. See `LICENSE` for more information.
 
 Elizeu Carlos  - elizeucarlosc@gmail.com
 
-Project Link: [https://github.com/serialdatabus/flickr-image-search](https://github.com/serialdatabus/flickr-image-search)
+Project Link: [https://github.com/serialdatabus/amazon-clone](https://github.com/serialdatabus/amazon-clone)
 
 
 
