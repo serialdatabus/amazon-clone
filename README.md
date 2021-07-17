@@ -31,7 +31,7 @@
   <h3 align="center">Amazon Clone ( In development )</h3>
 
   <p align="center">
-    Just another amazon clone that you can use as inspiration for your next online store.
+    Just another full stack amazon clone that you can use as inspiration for your next online store.
       <br/>
     <a target="_blank" href="https://main--fervent-goodall-3079eb.netlify.app/">View App</a>
     ·
