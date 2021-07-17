@@ -28,10 +28,11 @@
     <img src="images/app.png" style="width:380px;height:380px;object-fit:cover;" alt="Logo">
   </a>
 
-  <h3 align="center">Amazon Clone ( In development )</h3>
+  <h3 align="center">Amazon Clone ( Beta )</h3>
 
   <p align="center">
-    Just another full stack amazon clone that you can use as inspiration for your next online store.
+    Just another full stack amazon clone that you can use as inspiration for your next online store.<br/>
+    The project is currently under development and in the future i will implement more cool features.
       <br/>
     <a target="_blank" href="https://main--fervent-goodall-3079eb.netlify.app/">View App</a>
     ·
