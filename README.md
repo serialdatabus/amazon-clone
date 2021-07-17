@@ -126,9 +126,9 @@ See the [open issues](https://github.com/othneildrew/Best-README-Template/issues
 
 <!-- MORE SCREEN SHOTS -->
 <br/>
+<br/>
 
 ## More screenshots
-<br/>
 <img src="images/screenshot1.png" style="width:380px;height:380px;object-fit:cover;" alt="Logo">
 <br/>
 <img src="images/screenshot2.png" style="width:380px;height:380px;object-fit:cover;" alt="Logo">
