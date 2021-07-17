@@ -31,7 +31,7 @@
   <h3 align="center">Amazon Clone ( In development )</h3>
 
   <p align="center">
-    An awesome app where you can search easily your favourite image!
+    Just another amazon clone that you can use as inspiration for your next online store.
       <br/>
     <a target="_blank" href="https://main--fervent-goodall-3079eb.netlify.app/">View App</a>
     ·
