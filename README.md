@@ -28,7 +28,7 @@
     <img src="images/flickr-app.png" style="width:380px;height:380px;object-fit:cover;" alt="Logo">
   </a>
 
-  <h3 align="center">Flickr Image Search</h3>
+  <h3 align="center">Amazon Clone ( In development )</h3>
 
   <p align="center">
     An awesome app where you can search easily your favourite image!
