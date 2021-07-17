@@ -125,6 +125,7 @@ See the [open issues](https://github.com/othneildrew/Best-README-Template/issues
 
 
 <!-- MORE SCREEN SHOTS -->
+<br/>
 
 ## More screenshots
 <br/>
